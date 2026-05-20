@@ -53,7 +53,7 @@ export default function Navbar() {
           <img
             src="/zl-logo.png"
             alt="Zero Lines"
-            className="h-10 w-auto"
+            className="h-8 w-auto"
           />
           <span className={`text-sm font-semibold tracking-wide transition-colors duration-300 ${scrolled ? 'text-[#111827]' : 'text-[#111827]'}`}>
             Zero Lines

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Mail, MessageCircle } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 
 const contextPills = ['Clinical Training', 'Device Information', 'Practice Integration'];
 
@@ -37,7 +37,7 @@ export default function ContactSection() {
 
   return (
     <section ref={sectionRef} id="contact" className="bg-white section-padding">
-      <div className="max-w-[640px] mx-auto text-center px-6">
+      <div className="max-w-[560px] mx-auto text-center">
         {/* Header */}
         <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
           GET IN TOUCH
@@ -49,29 +49,25 @@ export default function ContactSection() {
           Interested in bringing the science of LED Light Therapy to your clinic, spa, or practice? Our team is here to answer your questions.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="reveal mt-10 flex flex-col sm:flex-row gap-4">
-          {/* Email Button */}
-          <a
-            href="mailto:info@zerolions.life"
-            className="flex-1 inline-flex items-center justify-center gap-3 text-white text-base font-semibold tracking-[0.02em] rounded-full px-10 py-[18px] transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
-            style={{ backgroundColor: '#0ABAB5' }}
-          >
-            <Mail className="w-5 h-5" />
-            Write us an email
-          </a>
+        {/* Contact Info */}
+        <div className="reveal mt-10 flex flex-col items-center gap-2">
+          <div className="flex items-center gap-3">
+            <Mail className="w-6 h-6 text-[#0ABAB5]" />
+            <span className="text-lg font-medium text-[#111827]">info@zerolines.com</span>
+          </div>
+          <p className="text-sm text-[#6B7280]">
+            For professional inquiries and educational resources
+          </p>
+        </div>
 
-          {/* WhatsApp Button */}
-          <a
-            href="https://wa.me/+35054005198"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 inline-flex items-center justify-center gap-3 text-white text-base font-semibold tracking-[0.02em] rounded-full px-10 py-[18px] transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
-            style={{ backgroundColor: '#22C55E' }}
+        {/* CTA Button */}
+        <div className="reveal mt-8">
+          <button
+            className="inline-flex items-center gap-3 bg-[#0ABAB5] text-white text-[15px] font-semibold tracking-[0.04em] rounded-full px-10 py-4 hover:bg-[#09a9a4] hover:scale-[1.03] hover:shadow-glow transition-all duration-300 group"
           >
-            <MessageCircle className="w-5 h-5" />
-            WhatsApp
-          </a>
+            Contact Our Team
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
 
         {/* Context Pills */}

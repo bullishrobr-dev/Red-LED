@@ -5,25 +5,25 @@ const statCards = [
     stat: '31%',
     label: 'Increase in Collagen Density',
     detail: 'After 8–12 weeks of consistent treatment — measured via skin biopsy analysis',
-    isHighlight: false,
+    isGold: false,
   },
   {
     stat: '31.6%',
     label: 'Reduction in Wrinkle Volume',
     detail: 'Periocular (around the eyes) wrinkle volume decrease — Wunsch et al. clinical study',
-    isHighlight: false,
+    isGold: false,
   },
   {
     stat: '81%',
     label: 'Patients Reported Visible Improvement',
     detail: 'In wrinkle appearance across multiple controlled clinical trials',
-    isHighlight: false,
+    isGold: false,
   },
   {
     stat: '97.4%',
     label: 'Patient Satisfaction Rate',
     detail: 'Across cosmetic LED therapy treatments — one of the highest in aesthetic medicine',
-    isHighlight: true,
+    isGold: true,
   },
 ];
 
@@ -37,7 +37,7 @@ const benefitPills = ['Wrinkle Reduction', 'Collagen Stimulation', 'Skin Lifting
 
 export default function SkinBenefitsSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const redStrokeRef = useRef<HTMLDivElement>(null);
+  const goldStrokeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -68,50 +68,36 @@ export default function SkinBenefitsSection() {
     return () => observer.disconnect();
   }, []);
 
-  // Red stroke animation for 97.4% stat
+  // AmberGoldStroke for 97.4% stat
   useEffect(() => {
-    const redStroke = redStrokeRef.current;
-    if (!redStroke) return;
+    const goldStroke = goldStrokeRef.current;
+    if (!goldStroke) return;
 
-    redStroke.style.width = '0%';
-    redStroke.style.transition = 'none';
+    goldStroke.style.width = '0%';
+    goldStroke.style.transition = 'none';
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
-            redStroke.style.transition = 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            redStroke.style.width = '100%';
+            goldStroke.style.transition = 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            goldStroke.style.width = '100%';
           }, 400);
-          observer.unobserve(redStroke);
+          observer.unobserve(goldStroke);
         }
       },
       { threshold: 0.5 }
     );
-    observer.observe(redStroke);
+    observer.observe(goldStroke);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section ref={sectionRef} id="skin" className="bg-[#FAFAFA] section-padding relative overflow-hidden">
-      {/* Subtle red LED glow behind stat cards */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          width: '80%',
-          height: '60%',
-          top: '20%',
-          left: '10%',
-          background: 'radial-gradient(ellipse, rgba(220, 38, 38, 0.05) 0%, transparent 70%)',
-          filter: 'blur(40px)',
-        }}
-      />
-
-      <div className="max-w-[1100px] mx-auto relative z-10">
+    <section ref={sectionRef} id="skin" className="bg-[#FAFAFA] section-padding">
+      <div className="max-w-[1100px] mx-auto">
         {/* Header */}
         <div className="text-center">
-          <p className="reveal flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#DC2626]" />
+          <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
             COSMETIC SCIENCE
           </p>
           <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
@@ -128,20 +114,20 @@ export default function SkinBenefitsSection() {
             <div
               key={i}
               className={`reveal relative bg-white rounded-3xl p-8 sm:p-10 ${
-                card.isHighlight ? 'border border-red-500/20' : 'border border-[#E5E7EB]/60'
+                card.isGold ? 'border border-[#C9A961]/30' : 'border border-[#E5E7EB]/60'
               }`}
             >
               <p
                 className={`text-[52px] sm:text-[60px] font-bold leading-none tracking-[-0.02em] ${
-                  card.isHighlight ? 'text-[#DC2626]' : 'text-black'
+                  card.isGold ? 'text-[#C9A961]' : 'text-black'
                 }`}
               >
                 {card.stat}
               </p>
-              {card.isHighlight && (
+              {card.isGold && (
                 <div
-                  ref={redStrokeRef}
-                  className="h-[3px] bg-[#DC2626] rounded-full mt-2"
+                  ref={goldStrokeRef}
+                  className="h-[3px] bg-[#C9A961] rounded-full mt-2"
                   style={{ width: '0%' }}
                 />
               )}
@@ -169,7 +155,7 @@ export default function SkinBenefitsSection() {
           {benefitPills.map((pill) => (
             <span
               key={pill}
-              className="inline-flex items-center bg-red-500/10 text-red-500 border border-red-500/20 text-xs font-semibold uppercase tracking-[0.1em] rounded-full px-5 py-2"
+              className="inline-flex items-center bg-[#0ABAB5]/10 text-[#0ABAB5] text-xs font-semibold uppercase tracking-[0.1em] rounded-full px-5 py-2"
             >
               {pill}
             </span>

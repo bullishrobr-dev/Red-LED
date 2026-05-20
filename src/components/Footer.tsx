@@ -32,24 +32,24 @@ export default function Footer() {
         <img
           src="/zl-logo.png"
           alt="Zero Lines"
-          className="h-12 w-auto"
+          className="h-10 w-auto"
         />
-
+        
         {/* Brand */}
         <p className="text-white text-lg font-semibold mt-4">
           Zero Lines
         </p>
-
+        
         {/* Tagline */}
         <p className="text-white/60 text-sm mt-1">
           Advanced Skin Solutions
         </p>
-
+        
         {/* Copyright */}
         <p className="text-white/40 text-[13px] mt-6">
           &copy; 2025 Zero Lines. All rights reserved.
         </p>
-
+        
         {/* Regulatory note */}
         <p className="text-white/[0.35] text-xs mt-2 max-w-md">
           Our devices are FDA Class 2 Medical Devices regulated under 21 CFR 878.4810

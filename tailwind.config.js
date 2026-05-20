@@ -26,11 +26,6 @@ module.exports = {
         textPrimary: "#111827",
         textSecondary: "#6B7280",
         glow: "rgba(10, 186, 181, 0.15)",
-        // LED Red colors
-        ledRed: '#DC2626',
-        ledRedLight: '#EF4444',
-        ledRedDim: '#F87171',
-        ledGlow: 'rgba(220, 38, 38, 0.15)',
         destructive: {
           DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
           foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
@@ -114,25 +109,6 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(6px)" },
         },
-        "led-pulse": {
-          "0%, 100%": { opacity: "0.3", transform: "scale(1)" },
-          "50%": { opacity: "0.6", transform: "scale(1.1)" },
-        },
-        "led-ray": {
-          "0%": { transform: "rotate(0deg) translateX(0)", opacity: "0.2" },
-          "50%": { transform: "rotate(3deg) translateX(10px)", opacity: "0.4" },
-          "100%": { transform: "rotate(0deg) translateX(0)", opacity: "0.2" },
-        },
-        "float-up": {
-          "0%": { transform: "translateY(100vh) scale(0)", opacity: "0" },
-          "10%": { opacity: "0.6" },
-          "90%": { opacity: "0.6" },
-          "100%": { transform: "translateY(-10vh) scale(1)", opacity: "0" },
-        },
-        "hero-fade-in": {
-          from: { opacity: "0", transform: "translateY(30px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -143,11 +119,6 @@ module.exports = {
         "glow-2": "glow-2 30s ease-in-out infinite",
         "glow-3": "glow-3 22s ease-in-out infinite",
         "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
-        "led-pulse": "led-pulse 8s ease-in-out infinite",
-        "led-ray": "led-ray 12s ease-in-out infinite",
-        "led-ray-slow": "led-ray 15s ease-in-out infinite reverse",
-        "float-up": "float-up 12s linear infinite",
-        "hero-fade-in": "hero-fade-in 0.8s ease-out forwards",
       },
     },
   },

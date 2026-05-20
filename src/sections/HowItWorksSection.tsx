@@ -1,8 +1,4 @@
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   { num: '1', label: 'Light Absorbed', desc: 'CCO captures photons' },
@@ -12,7 +8,6 @@ const steps = [
 
 export default function HowItWorksSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const diagramRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -41,32 +36,6 @@ export default function HowItWorksSection() {
     );
     observer.observe(section);
     return () => observer.disconnect();
-  }, []);
-
-  // GSAP ScrollTrigger for before/after diagram
-  useEffect(() => {
-    const diagram = diagramRef.current;
-    if (!diagram) return;
-
-    gsap.set(diagram, { opacity: 0, y: 50 });
-
-    const trigger = ScrollTrigger.create({
-      trigger: diagram,
-      start: 'top 85%',
-      once: true,
-      onEnter: () => {
-        gsap.to(diagram, {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power2.out',
-        });
-      },
-    });
-
-    return () => {
-      trigger.kill();
-    };
   }, []);
 
   return (
@@ -144,43 +113,6 @@ export default function HowItWorksSection() {
                 Light penetration at different wavelengths — red light targets surface layers, near-infrared reaches deep tissue.
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* NEW: Skin Before/After Diagram Block */}
-        <div
-          ref={diagramRef}
-          className="mt-20 rounded-[28px] overflow-hidden"
-          style={{ backgroundColor: '#FAFAFA' }}
-        >
-          {/* Red LED light bar divider */}
-          <div
-            className="w-full h-[2px]"
-            style={{
-              background: 'linear-gradient(90deg, #DC2626 0%, rgba(220, 38, 38, 0.5) 50%, transparent 100%)',
-            }}
-          />
-
-          <div className="p-6 sm:p-10">
-            {/* Section label */}
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#DC2626]" />
-              <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#DC2626]">
-                Deep Skin Penetration
-              </span>
-            </div>
-
-            {/* Before/After Diagram Image */}
-            <img
-              src="/skin-before-after.png"
-              alt="Red and Infrared LED light penetration through skin layers"
-              className="w-full h-auto rounded-xl"
-            />
-
-            {/* Caption */}
-            <p className="text-base text-[#DC2626] mt-6 leading-relaxed text-center font-medium">
-              Red &amp; Infrared LED light penetrates all skin layers — stimulating collagen production and cellular renewal from within.
-            </p>
           </div>
         </div>
       </div>

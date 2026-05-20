@@ -3,39 +3,33 @@ import { ChevronDown } from 'lucide-react';
 
 const benefitPills = ['Anti-Aging', 'Pain Relief', 'FDA Class 2'];
 
-// Floating particles config
-const particles = Array.from({ length: 12 }, (_, i) => ({
-  id: i,
-  size: 4 + Math.random() * 4,
-  left: Math.random() * 100,
-  delay: Math.random() * 10,
-  duration: 10 + Math.random() * 8,
-  color: i % 2 === 0 ? '#EF4444' : '#DC2626',
-}));
-
-// LED ray config
-const ledRays = [
-  { id: 1, angle: 45, width: 300, height: 800, top: '10%', left: '-10%', delay: 0, duration: 12 },
-  { id: 2, angle: -30, width: 250, height: 700, top: '20%', right: '-5%', delay: 2, duration: 15 },
-  { id: 3, angle: 60, width: 200, height: 600, bottom: '10%', left: '20%', delay: 4, duration: 10 },
-  { id: 4, angle: -45, width: 350, height: 900, top: '5%', right: '15%', delay: 1, duration: 18 },
-  { id: 5, angle: 15, width: 180, height: 500, bottom: '20%', right: '25%', delay: 3, duration: 14 },
-];
-
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const headlineRef = useRef<HTMLHeadingElement>(null);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
     const animateElements = () => {
-      const elements = section.querySelectorAll('.hero-animate');
-      elements.forEach((el, i) => {
+      if (hasAnimated.current) return;
+      hasAnimated.current = true;
+      const label = section.querySelector('.hero-label');
+      const tagline = section.querySelector('.hero-tagline');
+      const headline = section.querySelector('.hero-headline');
+      const subheadline = section.querySelector('.hero-subheadline');
+      const pills = section.querySelectorAll('.hero-pill');
+      const scrollInd = section.querySelector('.hero-scroll');
+
+      const els = [label, tagline, headline, subheadline, ...pills, scrollInd];
+      els.forEach((el, i) => {
+        if (!el) return;
         const htmlEl = el as HTMLElement;
         htmlEl.style.opacity = '0';
-        htmlEl.style.transform = 'translateY(30px)';
-        htmlEl.style.transition = `opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1) ${0.3 + i * 0.15}s, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) ${0.3 + i * 0.15}s`;
+        htmlEl.style.transform = i < 4 ? 'translateY(10px)' : 'translateY(15px)';
+        if (i === 2) htmlEl.style.transform = 'translateY(30px)';
+        htmlEl.style.transition = `opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${0.2 + i * 0.15}s, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${0.2 + i * 0.15}s`;
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
             htmlEl.style.opacity = '1';
@@ -52,107 +46,123 @@ export default function HeroSection() {
     return () => {};
   }, []);
 
+  useEffect(() => {
+    const headline = headlineRef.current;
+    if (!headline) return;
+
+    const text = headline.textContent || '';
+    headline.innerHTML = '';
+    
+    const chars: HTMLSpanElement[] = [];
+    for (let i = 0; i < text.length; i++) {
+      const span = document.createElement('span');
+      span.textContent = text[i] === ' ' ? '\u00A0' : text[i];
+      span.style.display = 'inline-block';
+      span.style.transition = 'transform 0.3s ease-out';
+      headline.appendChild(span);
+      chars.push(span);
+    }
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const amplitude = 15;
+      const frequency = 0.3;
+      chars.forEach((char, i) => {
+        const offset = Math.sin((i * frequency) + (scrollY * 0.01)) * amplitude;
+        char.style.transform = `translateY(${offset}px)`;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden"
-      style={{ backgroundColor: '#0A0A0F', paddingTop: '120px', paddingBottom: '100px' }}
+      className="relative min-h-[100dvh] flex flex-col items-center justify-center bg-white overflow-hidden"
+      style={{ paddingTop: '120px', paddingBottom: '100px' }}
     >
-      {/* LED Light Rays Background */}
+      {/* Lissajous Glow Orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {ledRays.map((ray) => (
-          <div
-            key={ray.id}
-            className="absolute"
-            style={{
-              width: ray.width,
-              height: ray.height,
-              top: ray.top,
-              left: ray.left,
-              right: ray.right,
-              bottom: ray.bottom,
-              background: `linear-gradient(${ray.angle}deg, rgba(220, 38, 38, 0.4) 0%, rgba(220, 38, 38, 0.1) 30%, transparent 70%)`,
-              filter: 'blur(40px)',
-              transform: `rotate(${ray.angle}deg)`,
-              animation: `led-ray ${ray.duration}s ease-in-out infinite`,
-              animationDelay: `${ray.delay}s`,
-            }}
-          />
-        ))}
+        <div
+          className="absolute rounded-full animate-glow-1"
+          style={{
+            width: '40vw',
+            height: '40vw',
+            background: 'radial-gradient(circle, rgba(10,186,181,0.03) 0%, transparent 70%)',
+            filter: 'blur(80px)',
+            top: '10%',
+            left: '15%',
+          }}
+        />
+        <div
+          className="absolute rounded-full animate-glow-2"
+          style={{
+            width: '50vw',
+            height: '50vw',
+            background: 'radial-gradient(circle, rgba(10,186,181,0.05) 0%, transparent 70%)',
+            filter: 'blur(80px)',
+            top: '30%',
+            right: '10%',
+          }}
+        />
+        <div
+          className="absolute rounded-full animate-glow-3"
+          style={{
+            width: '45vw',
+            height: '45vw',
+            background: 'radial-gradient(circle, rgba(10,186,181,0.04) 0%, transparent 70%)',
+            filter: 'blur(80px)',
+            bottom: '5%',
+            left: '30%',
+          }}
+        />
       </div>
 
-      {/* Ambient red glow behind content */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          width: '60vw',
-          height: '60vh',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          background: 'radial-gradient(ellipse, rgba(220, 38, 38, 0.12) 0%, transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
-
-      {/* Floating Red Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {particles.map((p) => (
-          <div
-            key={p.id}
-            className="absolute rounded-full"
-            style={{
-              width: p.size,
-              height: p.size,
-              left: `${p.left}%`,
-              backgroundColor: p.color,
-              filter: 'blur(1px)',
-              animation: `float-up ${p.duration}s linear infinite`,
-              animationDelay: `${p.delay}s`,
-            }}
-          />
-        ))}
+      {/* Hero Glow Orb Image */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img
+          src="/hero-glow-orb.png"
+          alt=""
+          className="w-[600px] h-[600px] object-contain opacity-30"
+          aria-hidden="true"
+        />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-[640px] mx-auto px-6">
-        {/* Zero Lines Logo */}
-        <div className="hero-animate">
-          <img
-            src="/zl-logo.png"
-            alt="Zero Lines"
-            className="w-20 h-auto mx-auto"
-            style={{ filter: 'drop-shadow(0 0 20px rgba(10, 186, 181, 0.3))' }}
-          />
-        </div>
-
+      <div className="relative z-10 flex flex-col items-center text-center max-w-[600px] mx-auto px-6">
         {/* Brand Label */}
-        <div className="hero-animate flex items-center gap-2 mt-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#DC2626] animate-led-pulse" />
+        <div className="hero-label flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6B7280]">
             ZERO LINES
           </span>
         </div>
 
+        {/* Tagline */}
+        <p className="hero-tagline text-lg font-normal text-[#6B7280] mt-2">
+          Advanced Skin Solutions
+        </p>
+
         {/* Headline */}
         <h1
-          className="hero-animate text-[48px] sm:text-[52px] lg:text-[56px] font-normal text-white leading-[1.1] tracking-[-0.02em] mt-4"
-          style={{ wordBreak: 'keep-all', maxWidth: '100%' }}
+          ref={headlineRef}
+          className="hero-headline text-[48px] sm:text-[52px] lg:text-[56px] font-normal text-black leading-[1.05] tracking-[-0.02em] mt-4"
         >
           The Science of Light
         </h1>
 
-        {/* Subheadline */}
-        <p className="hero-animate text-lg text-[#9CA3AF] mt-5 max-w-[560px] leading-relaxed">
-          Red &amp; Infrared LED Light Therapy — clinically proven, FDA Class 2 Medical Device technology for skin rejuvenation and pain relief.
+        {/* Sub-headline */}
+        <p className="hero-subheadline text-lg text-[#6B7280] mt-5 max-w-[520px] leading-relaxed">
+          Red &amp; Infrared LED Light Therapy — clinically proven, FDA-cleared technology for skin rejuvenation and pain relief.
         </p>
 
         {/* Benefit Pills */}
-        <div className="hero-animate flex flex-wrap justify-center gap-3 mt-10">
+        <div className="flex flex-wrap justify-center gap-3 mt-10">
           {benefitPills.map((pill) => (
             <span
               key={pill}
-              className="inline-flex items-center bg-red-500/10 text-red-400 border border-red-500/20 text-xs font-semibold uppercase tracking-[0.12em] rounded-full px-6 py-2.5 backdrop-blur-sm"
+              className="hero-pill inline-flex items-center bg-[#0ABAB5] text-white text-xs font-semibold uppercase tracking-[0.12em] rounded-full px-6 py-2.5"
             >
               {pill}
             </span>
@@ -160,9 +170,8 @@ export default function HeroSection() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="hero-animate mt-16 flex flex-col items-center gap-2">
-          <span className="text-[11px] uppercase tracking-[0.15em] text-[#6B7280]">Scroll</span>
-          <ChevronDown className="w-5 h-5 text-[#6B7280] animate-bounce-gentle" />
+        <div className="hero-scroll mt-16">
+          <ChevronDown className="w-6 h-6 text-[#0ABAB5]/40 animate-bounce-gentle" />
         </div>
       </div>
     </section>
