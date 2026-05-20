@@ -1,7 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ArrowRight, Mail } from 'lucide-react';
-
-const contextPills = ['Clinical Training', 'Device Information', 'Practice Integration'];
+import { Mail, MessageCircle } from 'lucide-react';
 
 export default function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -39,9 +37,12 @@ export default function ContactSection() {
     <section ref={sectionRef} id="contact" className="bg-white section-padding">
       <div className="max-w-[560px] mx-auto text-center">
         {/* Header */}
-        <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
-          GET IN TOUCH
-        </p>
+        <div className="reveal flex items-center justify-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+          <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+            GET IN TOUCH
+          </span>
+        </div>
         <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
           Learn More About LED Therapy
         </h2>
@@ -49,33 +50,32 @@ export default function ContactSection() {
           Interested in bringing the science of LED Light Therapy to your clinic, spa, or practice? Our team is here to answer your questions.
         </p>
 
-        {/* Contact Info */}
-        <div className="reveal mt-10 flex flex-col items-center gap-2">
-          <div className="flex items-center gap-3">
-            <Mail className="w-6 h-6 text-[#0ABAB5]" />
-            <span className="text-lg font-medium text-[#111827]">info@zerolines.com</span>
-          </div>
-          <p className="text-sm text-[#6B7280]">
-            For professional inquiries and educational resources
-          </p>
-        </div>
-
-        {/* CTA Button */}
-        <div className="reveal mt-8">
-          <button
-            className="inline-flex items-center gap-3 bg-[#0ABAB5] text-white text-[15px] font-semibold tracking-[0.04em] rounded-full px-10 py-4 hover:bg-[#09a9a4] hover:scale-[1.03] hover:shadow-glow transition-all duration-300 group"
+        {/* Contact Buttons */}
+        <div className="reveal mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="mailto:info@zerolions.life"
+            className="inline-flex items-center gap-3 bg-[#0ABAB5] text-white text-[15px] font-semibold tracking-[0.04em] rounded-full px-8 py-4 hover:bg-[#09a9a4] hover:scale-[1.03] hover:shadow-glow transition-all duration-300"
           >
-            Contact Our Team
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+            <Mail className="w-5 h-5" />
+            Write us an email
+          </a>
+          <a
+            href="https://wa.me/+35054005198"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-white text-[#0ABAB5] text-[15px] font-semibold tracking-[0.04em] rounded-full px-8 py-4 border-2 border-[#0ABAB5] hover:bg-[#0ABAB5]/5 hover:scale-[1.03] transition-all duration-300"
+          >
+            <MessageCircle className="w-5 h-5" />
+            WhatsApp
+          </a>
         </div>
 
         {/* Context Pills */}
         <div className="reveal flex flex-wrap justify-center gap-3 mt-8">
-          {contextPills.map((pill) => (
+          {['Clinical Training', 'Device Information', 'Practice Integration'].map((pill) => (
             <span
               key={pill}
-              className="inline-flex items-center bg-[#0ABAB5]/10 text-[#0ABAB5] text-[11px] font-semibold uppercase tracking-[0.1em] rounded-full px-4 py-2"
+              className="inline-flex items-center bg-gray-100 text-gray-600 text-[11px] font-semibold uppercase tracking-[0.1em] rounded-full px-4 py-2"
             >
               {pill}
             </span>

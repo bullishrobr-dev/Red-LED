@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 
-const steps = [
-  { num: '1', label: 'Light Absorbed', desc: 'CCO captures photons' },
-  { num: '2', label: 'NO Released', desc: 'Nitric oxide inhibition removed' },
-  { num: '3', label: 'ATP Surge', desc: 'Cellular energy increases up to 200%' },
+const beforeAfterSteps = [
+  { num: '1', label: 'Before', desc: 'Reduced collagen, visible wrinkles' },
+  { num: '2', label: 'Treatment', desc: 'LED light stimulates fibroblasts' },
+  { num: '3', label: 'After', desc: 'Firmer, smoother, lifted skin' },
 ];
 
 export default function HowItWorksSection() {
@@ -56,63 +56,64 @@ export default function HowItWorksSection() {
       </div>
 
       <div className="max-w-[1100px] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left: Diagram */}
-          <div className="reveal">
-            <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden">
-              <img
-                src="/mitochondria-process.png"
-                alt="Mitochondrial process of photobiomodulation"
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
-            {/* 3-step captions */}
-            <div className="grid grid-cols-3 gap-4 mt-6">
-              {steps.map((step) => (
-                <div key={step.num} className="flex flex-col items-center text-center">
-                  <div className="w-8 h-8 rounded-full bg-[#0ABAB5] flex items-center justify-center text-white text-sm font-semibold">
-                    {step.num}
-                  </div>
-                  <p className="text-sm font-medium text-[#111827] mt-2">{step.label}</p>
-                  <p className="text-xs text-[#6B7280] mt-0.5">{step.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: Text content */}
-          <div className="flex flex-col justify-center">
-            <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="reveal flex items-center justify-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
               THE MECHANISM
-            </p>
+            </span>
+          </div>
+          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+            How Light Becomes Healing
+          </h2>
+          <p className="reveal text-[17px] text-[#6B7280] leading-[1.65] max-w-[720px] mx-auto mt-5">
+            The process begins when red and near-infrared photons are absorbed by Cytochrome c Oxidase (CCO) — a key enzyme inside your cells&apos; mitochondria. This absorption releases inhibitory nitric oxide, which restores the cell&apos;s ability to produce energy. The result: a cascade of cellular repair, reduced inflammation, and renewed collagen production.
+          </p>
+        </div>
 
-            <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
-              How Light Becomes Healing
-            </h2>
+        {/* Skin Cross-Section */}
+        <div className="reveal">
+          <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden">
+            <img
+              src="/skin-cross-section.png"
+              alt="Skin cross-section showing light penetration"
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+          <p className="text-sm text-[#6B7280] italic mt-4 leading-relaxed text-center">
+            Light penetration at different wavelengths — red light targets surface layers, near-infrared reaches deep tissue.
+          </p>
+        </div>
 
-            <p className="reveal text-[17px] text-[#111827] leading-[1.65] mt-6">
-              The process begins when red and near-infrared photons are absorbed by Cytochrome c Oxidase (CCO) — a key enzyme inside your cells&apos; mitochondria. This absorption releases inhibitory nitric oxide, which restores the cell&apos;s ability to produce energy. The result: a cascade of cellular repair, reduced inflammation, and renewed collagen production.
-            </p>
+        {/* Key Callout Box */}
+        <div className="reveal mt-10 bg-[#FAFAFA] rounded-2xl p-6 border-l-[3px] border-[#0ABAB5]">
+          <p className="text-base font-medium text-[#111827] leading-relaxed">
+            ATP production increases by up to{' '}
+            <span className="text-[#0ABAB5] font-bold">200%</span> — fueling the cellular repair processes that reverse skin aging and reduce chronic pain.
+          </p>
+        </div>
 
-            {/* Key Callout Box */}
-            <div className="reveal mt-8 bg-[#FAFAFA] rounded-2xl p-6 border-l-[3px] border-[#0ABAB5]">
-              <p className="text-base font-medium text-[#111827] leading-relaxed">
-                ATP production increases by up to{' '}
-                <span className="text-[#0ABAB5] font-bold">200%</span> — fueling the cellular repair processes that reverse skin aging and reduce chronic pain.
-              </p>
-            </div>
-
-            {/* Skin Cross-Section */}
-            <div className="reveal mt-10">
-              <img
-                src="/skin-cross-section.png"
-                alt="Skin cross-section showing light penetration"
-                className="w-full h-auto rounded-xl"
-              />
-              <p className="text-sm text-[#6B7280] italic mt-4 leading-relaxed">
-                Light penetration at different wavelengths — red light targets surface layers, near-infrared reaches deep tissue.
-              </p>
-            </div>
+        {/* Before/After Diagram */}
+        <div className="reveal mt-12">
+          <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden">
+            <img
+              src="/skin-before-after.png"
+              alt="Skin before and after LED treatment"
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+          {/* 3-step captions */}
+          <div className="grid grid-cols-3 gap-4 mt-6">
+            {beforeAfterSteps.map((step) => (
+              <div key={step.num} className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 rounded-full bg-[#0ABAB5] flex items-center justify-center text-white text-sm font-semibold">
+                  {step.num}
+                </div>
+                <p className="text-sm font-medium text-[#111827] mt-2">{step.label}</p>
+                <p className="text-xs text-[#6B7280] mt-0.5">{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

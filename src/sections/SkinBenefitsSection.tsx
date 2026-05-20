@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Check } from 'lucide-react';
 
 const statCards = [
   {
@@ -34,6 +35,15 @@ const supportingStats = [
 ];
 
 const benefitPills = ['Wrinkle Reduction', 'Collagen Stimulation', 'Skin Lifting', 'Tone Correction', 'Pore Refinement'];
+
+const bulletPoints = [
+  'Stimulates collagen & elastin production for firmer, lifted skin',
+  'Reduces fine lines and wrinkles by up to 31.6%',
+  'Improves skin tone, texture, and overall radiance',
+  'Minimizes pore size and reduces acne lesions by 76-81%',
+  'Speeds up wound healing and reduces scar appearance by 57.9%',
+  '100% patient satisfaction in under-eye treatment studies',
+];
 
 export default function SkinBenefitsSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -97,9 +107,12 @@ export default function SkinBenefitsSection() {
       <div className="max-w-[1100px] mx-auto">
         {/* Header */}
         <div className="text-center">
-          <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
-            COSMETIC SCIENCE
-          </p>
+          <div className="reveal flex items-center justify-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+              COSMETIC SCIENCE
+            </span>
+          </div>
           <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             Science-Backed Skin Transformation
           </h2>
@@ -155,11 +168,26 @@ export default function SkinBenefitsSection() {
           {benefitPills.map((pill) => (
             <span
               key={pill}
-              className="inline-flex items-center bg-[#0ABAB5]/10 text-[#0ABAB5] text-xs font-semibold uppercase tracking-[0.1em] rounded-full px-5 py-2"
+              className="inline-flex items-center bg-[#0ABAB5]/10 text-[#0ABAB5] text-xs font-semibold uppercase tracking-[0.1em] rounded-full px-5 py-2 border border-[#0ABAB5]/20"
             >
               {pill}
             </span>
           ))}
+        </div>
+
+        {/* NEW: Bullet Points */}
+        <div className="reveal mt-14 bg-white rounded-2xl p-8 sm:p-10 border border-[#E5E7EB]/60">
+          <h3 className="text-xl font-semibold text-black mb-6 text-center">
+            How LED Helps with Anti-Aging
+          </h3>
+          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+            {bulletPoints.map((point, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <Check className="w-4 h-4 text-[#0ABAB5] mt-0.5 flex-shrink-0" />
+                <span className="text-[15px] text-[#374151] leading-relaxed">{point}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

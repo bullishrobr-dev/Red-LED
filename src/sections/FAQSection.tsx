@@ -1,100 +1,187 @@
 import { useEffect, useRef, useState } from 'react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Plus, Minus } from 'lucide-react';
 
-const faqItems = [
+const skinFaqItems = [
   {
-    q: 'Is LED Light Therapy safe?',
-    a: 'Yes. LED Light Therapy is a non-invasive, non-thermal treatment with no UV light exposure. FDA Class 2 Medical Devices undergo rigorous safety testing. Side effects are minimal — some users may experience temporary redness that resolves within hours. Over 10,000 published studies support its safety profile.',
+    q: 'How does LED light therapy reduce wrinkles?',
+    a: 'Red and near-infrared light penetrates the skin\'s layers, stimulating fibroblasts to produce more collagen and elastin. Clinical studies show a 31% increase in collagen density after 8-12 weeks, resulting in visibly smoother skin with fewer fine lines.',
   },
   {
     q: 'How long until I see results?',
-    a: 'Cosmetic improvements in skin texture and tone are typically visible within 2–4 weeks of consistent use. Collagen density increases of 31% are measured after 8–12 weeks. For pain relief, many users report improvement after 3–5 sessions, with cumulative benefits over time. Consistency is key to optimal results.',
+    a: 'Most users notice improved skin texture and radiance within 2-4 weeks. Significant wrinkle reduction and lifting effects typically appear after 8-12 weeks of consistent treatment. Results are cumulative and improve with ongoing maintenance.',
   },
   {
-    q: 'What is the difference between Red and Near-Infrared light?',
-    a: 'Red light (630–700nm) penetrates 1–3mm and targets the epidermis and upper dermis — ideal for skin rejuvenation, wrinkle reduction, and collagen stimulation. Near-infrared light (700–1100nm) penetrates 3–5+cm into deep tissue, muscle, and bone — making it optimal for pain relief, inflammation reduction, and athletic recovery. The most effective treatments use both wavelengths together.',
+    q: 'Is LED therapy safe for all skin types?',
+    a: 'Yes — LED light therapy is non-invasive, non-thermal, and contains no UV light. It is safe for all skin types and tones. As FDA Class 2 Medical Devices, our systems meet strict safety and performance standards.',
   },
   {
-    q: 'Is this technology really used by professional athletes?',
-    a: 'Yes. NFL teams including the Buffalo Bills, Arizona Cardinals, Carolina Panthers, Detroit Lions, and Washington Commanders use LED therapy. NBA teams including the Indiana Pacers, LA Clippers, Phoenix Suns, Toronto Raptors, and Utah Jazz integrate it into recovery protocols. The US Special Forces have used this technology since the 1990s, reporting 40%+ improvement in musculoskeletal injuries. It is WADA-approved and legal in all professional sports.',
+    q: 'Can it help with acne?',
+    a: 'Absolutely. Red light reduces inflammation while specific wavelengths target acne-causing bacteria. Studies show 76-81% reduction in acne lesions, with 81% of patients reporting visible improvement after 12 weeks.',
   },
   {
-    q: 'What does FDA Class 2 mean?',
-    a: 'FDA Class 2 is a medical device classification requiring manufacturers to demonstrate safety and effectiveness through clinical data. LED therapy devices fall under Regulation 21 CFR 878.4810. This classification means the device has been reviewed by the FDA for its intended therapeutic claims and meets established performance standards.',
-  },
-  {
-    q: 'Can LED Therapy help with chronic conditions like arthritis?',
-    a: 'Clinical evidence is strong. Across 18 double-blind trials for Rheumatoid Arthritis, LED therapy showed an 80% success rate. One 170-patient study demonstrated up to 90% pain attenuation. For chronic low back pain, studies show a 13.57-point reduction on the 100-point Visual Analog Scale. While individual results vary, the body of evidence supports significant therapeutic benefit.',
+    q: 'Does it help with loose skin on the body?',
+    a: 'Yes — LED therapy stimulates collagen production throughout the body, not just the face. It helps tighten loose skin on arms, abdomen, and thighs, improves body contours, and can reduce the appearance of cellulite and stretch marks.',
   },
 ];
 
+const painFaqItems = [
+  {
+    q: 'How does LED therapy relieve pain?',
+    a: 'Red and near-infrared light increases cellular ATP production by up to 200%, which reduces inflammation at the cellular level. It also stimulates beta-endorphin release and improves blood flow to damaged tissues. Studies show up to 90% pain reduction for arthritis patients.',
+  },
+  {
+    q: 'Is it effective for chronic pain?',
+    a: 'Yes — clinical studies demonstrate significant relief for chronic low back pain (13.57-point reduction on VAS scale), arthritis (up to 90% pain attenuation), and fibromyalgia. It addresses pain at its source by reducing inflammatory cytokines.',
+  },
+  {
+    q: 'Can athletes use this for recovery?',
+    a: 'Absolutely — LED therapy is used by NFL, NBA, and Olympic athletes. It reduces DOMS by up to 50%, helps athletes return to play 50% faster (9.6 vs 19.23 days), and is WADA-approved for use in all professional sports.',
+  },
+  {
+    q: 'How does it compare to pain medication?',
+    a: 'LED therapy is a non-invasive, drug-free alternative to NSAIDs and opioids. Unlike medication, there are no side effects, no dependency risk, and it addresses the root cause of pain (inflammation and tissue damage) rather than just masking symptoms.',
+  },
+  {
+    q: 'Is it FDA cleared for pain relief?',
+    a: 'Yes — our devices are FDA Class 2 Medical Devices, cleared for temporary relief of minor muscle and joint pain, arthritis, muscle spasms, and for increasing local blood circulation.',
+  },
+];
+
+interface AccordionItemProps {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProps) {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <div className="border-b border-[#E5E7EB]">
+      <button
+        onClick={onToggle}
+        className="flex items-center justify-between w-full py-5 text-left group"
+      >
+        <span className="text-[17px] font-medium text-[#111827] pr-4">{question}</span>
+        <span className="flex-shrink-0 text-[#0ABAB5] transition-transform duration-300">
+          {isOpen ? (
+            <Minus className="w-5 h-5" />
+          ) : (
+            <Plus className="w-5 h-5" />
+          )}
+        </span>
+      </button>
+      <div
+        ref={contentRef}
+        className="overflow-hidden transition-all duration-300 ease-out"
+        style={{
+          maxHeight: isOpen ? '500px' : '0px',
+          opacity: isOpen ? 1 : 0,
+        }}
+      >
+        <p className="text-base text-[#6B7280] leading-[1.65] pb-5">
+          {answer}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function FAQGroup({
+  items,
+  label,
+  defaultOpen = 0,
+}: {
+  items: { q: string; a: string }[];
+  label: string;
+  defaultOpen?: number;
+}) {
+  const [openIndex, setOpenIndex] = useState<number | null>(defaultOpen);
+
+  return (
+    <div>
+      <div className="flex items-center justify-center gap-2 mb-8">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+        <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+          {label}
+        </span>
+      </div>
+      <div>
+        {items.map((item, i) => (
+          <AccordionItem
+            key={i}
+            question={item.q}
+            answer={item.a}
+            isOpen={openIndex === i}
+            onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function FAQSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [openValue, setOpenValue] = useState('item-0');
+  const skinRef = useRef<HTMLElement>(null);
+  const painRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
+    const animateSection = (section: HTMLElement | null) => {
+      if (!section) return;
 
-    const elements = section.querySelectorAll('.reveal');
-    elements.forEach((el, i) => {
-      const htmlEl = el as HTMLElement;
-      htmlEl.style.opacity = '0';
-      htmlEl.style.transform = 'translateY(20px)';
-      htmlEl.style.transition = `opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.08}s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.08}s`;
-    });
+      const elements = section.querySelectorAll('.reveal');
+      elements.forEach((el, i) => {
+        const htmlEl = el as HTMLElement;
+        htmlEl.style.opacity = '0';
+        htmlEl.style.transform = 'translateY(20px)';
+        htmlEl.style.transition = `opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.08}s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.08}s`;
+      });
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          elements.forEach((el) => {
-            const htmlEl = el as HTMLElement;
-            htmlEl.style.opacity = '1';
-            htmlEl.style.transform = 'translateY(0)';
-          });
-          observer.unobserve(section);
-        }
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(section);
-    return () => observer.disconnect();
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            elements.forEach((el) => {
+              const htmlEl = el as HTMLElement;
+              htmlEl.style.opacity = '1';
+              htmlEl.style.transform = 'translateY(0)';
+            });
+            observer.unobserve(section);
+          }
+        },
+        { threshold: 0.15 }
+      );
+      observer.observe(section);
+    };
+
+    animateSection(skinRef.current);
+    animateSection(painRef.current);
   }, []);
 
   return (
-    <section ref={sectionRef} id="faq" className="bg-[#FAFAFA] section-padding">
-      <div className="max-w-[720px] mx-auto">
-        {/* Header */}
-        <div className="text-center">
-          <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
-            QUESTIONS &amp; ANSWERS
-          </p>
-          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
-            Frequently Asked Questions
-          </h2>
+    <>
+      {/* Part 1: FAQ — Skin & Anti-Aging */}
+      <section ref={skinRef} id="faq" className="bg-white section-padding">
+        <div className="max-w-[720px] mx-auto">
+          <div className="reveal text-center">
+            <h2 className="text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em]">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="reveal mt-12">
+            <FAQGroup items={skinFaqItems} label="FAQ — SKIN &amp; ANTI-AGING" defaultOpen={0} />
+          </div>
         </div>
+      </section>
 
-        {/* Accordion */}
-        <div className="reveal mt-12">
-          <Accordion
-            type="single"
-            collapsible
-            value={openValue}
-            onValueChange={setOpenValue}
-          >
-            {faqItems.map((item, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="border-b border-[#E5E7EB]">
-                <AccordionTrigger className="py-5 text-[17px] font-medium text-[#111827] hover:no-underline [&>svg]:text-[#0ABAB5] [&>svg]:w-5 [&>svg]:h-5">
-                  {item.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-base text-[#6B7280] leading-[1.65] pb-5">
-                  {item.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+      {/* Part 2: FAQ — Pain & Recovery */}
+      <section ref={painRef} className="bg-[#FAFAFA] section-padding">
+        <div className="max-w-[720px] mx-auto">
+          <div className="reveal mt-4">
+            <FAQGroup items={painFaqItems} label="FAQ — PAIN RELIEF" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

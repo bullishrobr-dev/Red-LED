@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Check } from 'lucide-react';
 
 const statCards = [
   {
@@ -21,6 +22,17 @@ const statCards = [
     label: 'DOMS Reduction',
     detail: 'Decrease in delayed-onset muscle soreness after intense training',
   },
+];
+
+const bulletPoints = [
+  'Up to 90% pain attenuation for Rheumatoid Arthritis',
+  'Reduces inflammatory cytokines (IL-6 by 82.5%, TNF-alpha by 82.4%)',
+  '50% faster return-to-play for professional athletes',
+  'Effective for chronic back pain, joint stiffness, and muscle recovery',
+  'Reduces DOMS (Delayed Onset Muscle Soreness) by up to 50%',
+  'Used by NFL, NBA teams and US Special Forces for recovery',
+  'Non-invasive, drug-free alternative to NSAIDs and opioids',
+  'FDA Class 2 cleared for temporary relief of minor muscle and joint pain',
 ];
 
 export default function PainBenefitsSection() {
@@ -81,13 +93,16 @@ export default function PainBenefitsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="body" className="bg-white section-padding">
+    <section ref={sectionRef} id="pain" className="bg-white section-padding">
       <div className="max-w-[1100px] mx-auto">
         {/* Header */}
         <div className="text-center">
-          <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
-            THERAPEUTIC SCIENCE
-          </p>
+          <div className="reveal flex items-center justify-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+              THERAPEUTIC SCIENCE
+            </span>
+          </div>
           <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             Beyond Skin — Healing from Within
           </h2>
@@ -143,8 +158,23 @@ export default function PainBenefitsSection() {
           </p>
         </div>
 
+        {/* NEW: Bullet Points */}
+        <div className="reveal mt-12 bg-[#FAFAFA] rounded-2xl p-8 sm:p-10">
+          <h3 className="text-xl font-semibold text-black mb-6 text-center">
+            How LED Helps with Pain Relief
+          </h3>
+          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+            {bulletPoints.map((point, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <Check className="w-4 h-4 text-[#0ABAB5] mt-0.5 flex-shrink-0" />
+                <span className="text-[15px] text-[#374151] leading-relaxed">{point}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Deep Tissue Callout */}
-        <div className="reveal grid md:grid-cols-[40%_60%] gap-8 items-center mt-10">
+        <div className="reveal grid md:grid-cols-[40%_60%] gap-8 items-center mt-12">
           <img
             src="/team-sports.png"
             alt="Professional athletes using LED therapy"
