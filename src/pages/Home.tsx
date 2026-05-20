@@ -1,20 +1,26 @@
-import { useState } from 'react'
-import '../App.css'
+import Layout from '@/components/Layout'
+import HeroSection from '@/sections/HeroSection'
+import WhatIsSection from '@/sections/WhatIsSection'
+import HowItWorksSection from '@/sections/HowItWorksSection'
+import SkinBenefitsSection from '@/sections/SkinBenefitsSection'
+import PainBenefitsSection from '@/sections/PainBenefitsSection'
+import WavelengthSection from '@/sections/WavelengthSection'
+import ClinicalEvidenceSection from '@/sections/ClinicalEvidenceSection'
+import FAQSection from '@/sections/FAQSection'
+import ContactSection from '@/sections/ContactSection'
 
 export default function Home() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-    </>
+    <Layout>
+      <HeroSection />
+      <WhatIsSection />
+      <HowItWorksSection />
+      <SkinBenefitsSection />
+      <PainBenefitsSection />
+      <WavelengthSection />
+      <ClinicalEvidenceSection />
+      <FAQSection />
+      <ContactSection />
+    </Layout>
   )
 }
