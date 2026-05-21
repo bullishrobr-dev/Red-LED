@@ -18,9 +18,9 @@ const evidenceStats = [
   },
   {
     icon: Check,
-    stat: '100%',
-    label: 'Under-Eye Satisfaction',
-    detail: 'Patient satisfaction rate for under-eye treatment with zero adverse events reported',
+    stat: '97.4%',
+    label: 'Patient Satisfaction',
+    detail: 'Overall patient satisfaction rate across cosmetic LED therapy treatments',
     isGold: true,
   },
 ];

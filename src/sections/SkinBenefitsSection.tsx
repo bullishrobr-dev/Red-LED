@@ -11,7 +11,7 @@ const statCards = [
   {
     stat: '31.6%',
     label: 'Reduction in Wrinkle Volume',
-    detail: 'Periocular (around the eyes) wrinkle volume decrease — Wunsch et al. clinical study',
+    detail: 'Wrinkle volume decrease across treated areas — Wunsch et al. clinical study',
     isGold: false,
   },
   {
@@ -42,7 +42,7 @@ const bulletPoints = [
   'Improves skin tone, texture, and overall radiance',
   'Minimizes pore size and reduces acne lesions by 76-81%',
   'Speeds up wound healing and reduces scar appearance by 57.9%',
-  '100% patient satisfaction in under-eye treatment studies',
+  'Promotes overall skin health and natural cellular rejuvenation',
 ];
 
 export default function SkinBenefitsSection() {

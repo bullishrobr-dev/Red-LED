@@ -8,6 +8,8 @@ import HowItWorksSection from '@/sections/HowItWorksSection'
 import PainBenefitsSection from '@/sections/PainBenefitsSection'
 import WavelengthSection from '@/sections/WavelengthSection'
 import ClinicalEvidenceSection from '@/sections/ClinicalEvidenceSection'
+import ROISection from '@/sections/ROISection'
+import ProfessionalsSection from '@/sections/ProfessionalsSection'
 import FAQSection from '@/sections/FAQSection'
 import ContactSection from '@/sections/ContactSection'
 
@@ -23,6 +25,8 @@ export default function Home() {
       <PainBenefitsSection />
       <WavelengthSection />
       <ClinicalEvidenceSection />
+      <ROISection />
+      <ProfessionalsSection />
       <FAQSection />
       <ContactSection />
     </Layout>
