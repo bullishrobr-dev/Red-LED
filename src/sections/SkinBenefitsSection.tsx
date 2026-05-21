@@ -114,7 +114,7 @@ export default function SkinBenefitsSection() {
             </span>
           </div>
           <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
-            Deliver Results Your Clients Can See
+            Science-Backed Skin Transformation
           </h2>
           <p className="reveal text-lg text-[#4B5563] max-w-[560px] mx-auto mt-3">
             Clinically measurable results from Red &amp; Infrared LED therapy — no surgery, no downtime.
@@ -187,6 +187,58 @@ export default function SkinBenefitsSection() {
                 <span className="text-[15px] text-[#374151] leading-relaxed">{point}</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* NEW: Face Treatment Diagram */}
+        <div className="reveal mt-14">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+              TREATMENT AREAS
+            </p>
+          </div>
+          <h3 className="text-xl font-semibold text-black text-center mb-6">
+            Where to Use It on Your Face
+          </h3>
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E7EB]/60">
+            <img
+              src="/face-antiaging-diagram.png"
+              alt="Facial treatment areas for LED anti-aging therapy"
+              className="w-full max-w-[700px] mx-auto h-auto rounded-xl"
+            />
+          </div>
+          <p className="text-sm text-[#4B5563] mt-4 text-center leading-relaxed max-w-[600px] mx-auto">
+            Target forehead lines, crow's feet, cheeks, smile lines, jawline, and neck for comprehensive facial rejuvenation.
+          </p>
+        </div>
+
+        {/* NEW: Anti-Aging Usage Protocol */}
+        <div className="reveal mt-14 bg-white rounded-2xl p-8 sm:p-10 border border-[#E5E7EB]/60">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+              RECOMMENDED PROTOCOL
+            </p>
+          </div>
+          <h3 className="text-xl font-semibold text-black text-center mb-8">
+            How Often to Use It for Anti-Aging
+          </h3>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-[#FAFAFA] rounded-2xl p-6 text-center">
+              <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">3×</p>
+              <p className="text-sm font-semibold text-[#111827] mt-3">Per Week</p>
+              <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
+                For the first month — this kick-starts collagen production and gets your skin renewal process going
+              </p>
+            </div>
+            <div className="bg-[#FAFAFA] rounded-2xl p-6 text-center">
+              <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">1×</p>
+              <p className="text-sm font-semibold text-[#111827] mt-3">Every 2 Weeks</p>
+              <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
+                After the first month — maintenance sessions to keep improving and preserving your results
+              </p>
+            </div>
           </div>
         </div>
       </div>

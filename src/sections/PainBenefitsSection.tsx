@@ -173,8 +173,67 @@ export default function PainBenefitsSection() {
           </div>
         </div>
 
+        {/* NEW: Body Pain Treatment Diagram */}
+        <div className="reveal mt-14">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+              TREATMENT AREAS
+            </p>
+          </div>
+          <h3 className="text-xl font-semibold text-black text-center mb-6">
+            Where to Use It on Your Body
+          </h3>
+          <div className="bg-[#FAFAFA] rounded-3xl p-6 sm:p-8 border border-[#E5E7EB]/60">
+            <img
+              src="/body-pain-diagram.png"
+              alt="Body treatment areas for LED pain relief therapy"
+              className="w-full max-w-[800px] mx-auto h-auto rounded-xl"
+            />
+          </div>
+          <p className="text-sm text-[#4B5563] mt-4 text-center leading-relaxed max-w-[600px] mx-auto">
+            Target neck, shoulders, back, elbows, wrists, hips, knees, and ankles — anywhere you experience pain, stiffness, or inflammation.
+          </p>
+        </div>
+
+        {/* NEW: Pain Usage Protocol */}
+        <div className="reveal mt-14 bg-[#FAFAFA] rounded-2xl p-8 sm:p-10">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+              RECOMMENDED PROTOCOL
+            </p>
+          </div>
+          <h3 className="text-xl font-semibold text-black text-center mb-8">
+            How Often to Use It for Pain Relief
+          </h3>
+          <div className="grid sm:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl p-6 text-center">
+              <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">Multiple</p>
+              <p className="text-sm font-semibold text-[#111827] mt-3">Times Per Day</p>
+              <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
+                Use as often as needed — there is no upper limit for pain relief sessions
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 text-center">
+              <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">15-30</p>
+              <p className="text-sm font-semibold text-[#111827] mt-3">Minutes Per Session</p>
+              <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
+                Hold the device 2-4 inches from the treatment area for optimal results
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 text-center">
+              <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">Daily</p>
+              <p className="text-sm font-semibold text-[#111827] mt-3">For Best Results</p>
+              <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
+                Consistent daily use provides the most effective pain management over time
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Deep Tissue Callout */}
-        <div className="reveal grid md:grid-cols-[40%_60%] gap-8 items-center mt-12">
+        <div className="reveal grid md:grid-cols-[40%_60%] gap-8 items-center mt-14">
           <img
             src="/team-sports.png"
             alt="Professional athletes using LED therapy"
