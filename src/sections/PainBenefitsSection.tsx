@@ -216,11 +216,8 @@ export default function PainBenefitsSection() {
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center">
-              <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">15-30</p>
+              <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">5</p>
               <p className="text-sm font-semibold text-[#111827] mt-3">Minutes Per Session</p>
-              <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
-                Hold the device 2-4 inches from the treatment area for optimal results
-              </p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center">
               <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">Daily</p>
