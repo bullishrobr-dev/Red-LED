@@ -57,7 +57,6 @@ export default function ClinicalEvidenceSection() {
             htmlEl.style.opacity = '1';
             htmlEl.style.transform = 'translateY(0)';
           });
-          observer.unobserve(section);
         }
       },
       { threshold: 0.1 }
@@ -81,7 +80,6 @@ export default function ClinicalEvidenceSection() {
             goldStroke.style.transition = 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
             goldStroke.style.width = '100%';
           }, 600);
-          observer.unobserve(goldStroke);
         }
       },
       { threshold: 0.5 }
@@ -138,12 +136,16 @@ export default function ClinicalEvidenceSection() {
             return (
               <div
                 key={i}
-                className={`reveal text-center p-8 rounded-3xl ${
-                  card.isGold ? 'bg-[#FAFAFA] border border-[#C9A961]/30' : 'bg-[#FAFAFA]'
+                className={`reveal text-center p-8 sm:p-10 rounded-3xl ${
+                  card.isGold
+                    ? 'bg-gradient-to-b from-white to-[#FAFAFA] border-2 border-[#C9A961]/30 shadow-lg'
+                    : 'bg-white border border-[#E5E7EB]/80 shadow-sm'
                 }`}
               >
-                <IconComp className="w-9 h-9 text-[#0ABAB5] mx-auto" />
-                <p className={`text-[28px] font-bold mt-4 ${card.isGold ? 'text-[#C9A961]' : 'text-black'}`}>
+                <div className={`w-14 h-14 rounded-2xl mx-auto flex items-center justify-center ${card.isGold ? 'bg-[#C9A961]/10' : 'bg-[#0ABAB5]/10'}`}>
+                  <IconComp className={`w-7 h-7 ${card.isGold ? 'text-[#C9A961]' : 'text-[#0ABAB5]'}`} />
+                </div>
+                <p className={`text-[32px] font-bold mt-5 ${card.isGold ? 'text-[#C9A961]' : 'text-black'}`}>
                   {card.stat}
                 </p>
                 {card.isGold && (
@@ -153,27 +155,29 @@ export default function ClinicalEvidenceSection() {
                     style={{ width: '0%', maxWidth: '120px' }}
                   />
                 )}
-                <p className="text-base font-medium text-[#111827] mt-3">{card.label}</p>
+                <p className="text-base font-semibold text-[#111827] mt-3">{card.label}</p>
                 <p className="text-sm text-[#4B5563] mt-2 leading-relaxed">{card.detail}</p>
               </div>
             );
           })}
         </div>
 
-        {/* Adoption List */}
-        <div className="reveal mt-12 max-w-md mx-auto">
-          <h3 className="text-xl font-semibold text-black mb-4">Professional Adoption</h3>
-          <ul className="space-y-0">
+        {/* Adoption Grid */}
+        <div className="reveal mt-14">
+          <h3 className="text-xl font-semibold text-black text-center mb-6">Trusted Across Industries</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {adoptionItems.map((item, i) => (
-              <li
+              <div
                 key={i}
-                className="flex items-center gap-3 py-3 border-b border-[#E5E7EB] last:border-0"
+                className="bg-[#FAFAFA] rounded-2xl p-5 text-center border border-[#E5E7EB]/60 hover:border-[#0ABAB5]/30 transition-colors"
               >
-                <Check className="w-5 h-5 text-[#0ABAB5] flex-shrink-0" />
-                <span className="text-base text-[#111827]">{item}</span>
-              </li>
+                <div className="w-10 h-10 rounded-full bg-[#0ABAB5]/10 flex items-center justify-center mx-auto">
+                  <Check className="w-5 h-5 text-[#0ABAB5]" />
+                </div>
+                <p className="text-sm font-medium text-[#111827] mt-3">{item}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
 
         {/* Device Image */}

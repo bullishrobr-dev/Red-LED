@@ -59,7 +59,6 @@ export default function PainBenefitsSection() {
             htmlEl.style.opacity = '1';
             htmlEl.style.transform = 'translateY(0)';
           });
-          observer.unobserve(section);
         }
       },
       { threshold: 0.1 }
@@ -83,7 +82,6 @@ export default function PainBenefitsSection() {
             goldStroke.style.transition = 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
             goldStroke.style.width = '100%';
           }, 400);
-          observer.unobserve(goldStroke);
         }
       },
       { threshold: 0.5 }

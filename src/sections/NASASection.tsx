@@ -41,7 +41,6 @@ export default function NASASection() {
             htmlEl.style.opacity = '1';
             htmlEl.style.transform = 'translateY(0)';
           });
-          observer.unobserve(section);
         }
       },
       { threshold: 0.15 }

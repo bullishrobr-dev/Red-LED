@@ -69,7 +69,6 @@ export default function SkinBenefitsSection() {
             htmlEl.style.opacity = '1';
             htmlEl.style.transform = 'translateY(0)';
           });
-          observer.unobserve(section);
         }
       },
       { threshold: 0.15 }
@@ -93,7 +92,6 @@ export default function SkinBenefitsSection() {
             goldStroke.style.transition = 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
             goldStroke.style.width = '100%';
           }, 400);
-          observer.unobserve(goldStroke);
         }
       },
       { threshold: 0.5 }
@@ -222,9 +220,9 @@ export default function SkinBenefitsSection() {
             </p>
           </div>
           <h3 className="text-xl font-semibold text-black text-center mb-8">
-            How Often to Use It for Anti-Aging
+            Anti-Aging Treatment Protocol
           </h3>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             <div className="bg-[#FAFAFA] rounded-2xl p-6 text-center">
               <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">3×</p>
               <p className="text-sm font-semibold text-[#111827] mt-3">Per Week</p>
@@ -237,6 +235,13 @@ export default function SkinBenefitsSection() {
               <p className="text-sm font-semibold text-[#111827] mt-3">Every 2 Weeks</p>
               <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
                 After the first month — maintenance sessions to keep improving and preserving your results
+              </p>
+            </div>
+            <div className="bg-[#FAFAFA] rounded-2xl p-6 text-center">
+              <p className="text-[36px] font-bold text-[#0ABAB5] leading-none">10–15</p>
+              <p className="text-sm font-semibold text-[#111827] mt-3">Minutes Per Session</p>
+              <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
+                Place the device directly on clean, dry skin for optimal light absorption
               </p>
             </div>
           </div>
