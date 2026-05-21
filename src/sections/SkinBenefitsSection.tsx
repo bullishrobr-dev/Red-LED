@@ -209,7 +209,7 @@ export default function SkinBenefitsSection() {
             />
           </div>
           <p className="text-sm text-[#4B5563] mt-4 text-center leading-relaxed max-w-[600px] mx-auto">
-            Target forehead lines, crow's feet, cheeks, smile lines, jawline, and neck for comprehensive facial rejuvenation.
+            Target forehead lines, cheeks, smile lines, jawline, chin, and neck for comprehensive facial rejuvenation. Eye area excluded — see our dedicated eye care products.
           </p>
         </div>
 
