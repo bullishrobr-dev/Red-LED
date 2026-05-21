@@ -15,9 +15,9 @@ const statCards = [
     isGold: true,
   },
   {
-    stat: '81%',
-    label: 'Patients Reported Visible Improvement',
-    detail: 'In wrinkle appearance across multiple controlled clinical trials',
+    stat: '76%',
+    label: 'Reduction in Acne Lesions',
+    detail: 'Decrease in inflammatory acne lesions after 12 weeks of treatment',
     isGold: false,
   },
   {
@@ -31,7 +31,7 @@ const statCards = [
 const supportingStats = [
   { num: '30%', label: 'Decrease in Pore Size' },
   { num: '57.9%', label: 'Scar Improvement' },
-  { num: '76–81%', label: 'Reduction in Acne' },
+  { num: '69%', label: 'Users Showed Improvement' },
 ];
 
 const benefitPills = ['Wrinkle Reduction', 'Collagen Stimulation', 'Skin Lifting', 'Tone Correction', 'Pore Refinement'];
