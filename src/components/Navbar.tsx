@@ -51,7 +51,7 @@ export default function Navbar() {
           }}
         >
           <img
-            src="/zero-lines-logo.png"
+            src="/zl-logo-nav.png"
             alt="Zero Lines"
             className="h-8 w-auto"
           />
