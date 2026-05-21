@@ -48,10 +48,10 @@ export default function WavelengthSection() {
           <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
             WAVELENGTH SCIENCE
           </p>
-          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             The Right Light at the Right Depth
           </h2>
-          <p className="reveal text-lg text-[#6B7280] max-w-[580px] mx-auto mt-3">
+          <p className="reveal text-lg text-[#4B5563] max-w-[580px] mx-auto mt-3">
             Different wavelengths penetrate to different tissue depths. The most effective therapeutic range — known as the optical window — spans 600–1000nm.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function WavelengthSection() {
             alt="Wavelength penetration depth diagram"
             className="w-full h-auto rounded-xl"
           />
-          <p className="text-sm text-[#6B7280] mt-4 leading-relaxed">
+          <p className="text-sm text-[#4B5563] mt-4 leading-relaxed">
             Penetration depth by wavelength. Red wavelengths (630–660nm) target surface skin. Near-infrared (810–850nm) reaches deep tissue, muscle, and bone.
           </p>
         </div>

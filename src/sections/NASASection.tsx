@@ -61,10 +61,10 @@ export default function NASASection() {
               RESEARCH HISTORY
             </span>
           </div>
-          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             From Space to Your Skin — NASA Research
           </h2>
-          <p className="reveal text-[17px] text-[#6B7280] leading-[1.65] max-w-[720px] mx-auto mt-5">
+          <p className="reveal text-[17px] text-[#4B5563] leading-[1.65] max-w-[720px] mx-auto mt-5">
             In the early 2000s, NASA conducted groundbreaking research on red and near-infrared LED light for wound healing in space. Their studies demonstrated that specific wavelengths of light could significantly accelerate tissue repair and cell growth in microgravity environments — research that laid the foundation for modern LED light therapy devices used in clinics and medical spas worldwide today.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function NASASection() {
                 {card.stat}
               </p>
               <p className="text-base font-semibold text-[#111827] mt-4">{card.label}</p>
-              <p className="text-sm text-[#6B7280] mt-2 leading-relaxed">{card.detail}</p>
+              <p className="text-sm text-[#4B5563] mt-2 leading-relaxed">{card.detail}</p>
             </div>
           ))}
         </div>

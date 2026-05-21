@@ -43,11 +43,11 @@ export default function ContactSection() {
             GET IN TOUCH
           </span>
         </div>
-        <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
-          Learn More About LED Therapy
+        <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          Ready to See Zero Lines in Action?
         </h2>
-        <p className="reveal text-lg text-[#6B7280] mt-3">
-          Interested in bringing the science of LED Light Therapy to your clinic, spa, or practice? Our team is here to answer your questions.
+        <p className="reveal text-lg text-[#4B5563] mt-3">
+          Schedule a complimentary demonstration and discover how LED Light Therapy can transform your practice's revenue and patient outcomes.
         </p>
 
         {/* Contact Buttons */}
@@ -57,22 +57,22 @@ export default function ContactSection() {
             className="inline-flex items-center gap-3 bg-[#0ABAB5] text-white text-[15px] font-semibold tracking-[0.04em] rounded-full px-8 py-4 hover:bg-[#09a9a4] hover:scale-[1.03] hover:shadow-glow transition-all duration-300"
           >
             <Mail className="w-5 h-5" />
-            Write us an email
+            Email Our Team
           </a>
           <a
             href="https://wa.me/+35054005198"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-[#0ABAB5] text-[15px] font-semibold tracking-[0.04em] rounded-full px-8 py-4 border-2 border-[#0ABAB5] hover:bg-[#0ABAB5]/5 hover:scale-[1.03] transition-all duration-300"
+            className="inline-flex items-center gap-3 bg-[#25D366] text-white text-[15px] font-semibold tracking-[0.04em] rounded-full px-8 py-4 hover:bg-[#20BD5A] hover:scale-[1.03] transition-all duration-300"
           >
             <MessageCircle className="w-5 h-5" />
-            WhatsApp
+            Message on WhatsApp
           </a>
         </div>
 
         {/* Context Pills */}
         <div className="reveal flex flex-wrap justify-center gap-3 mt-8">
-          {['Clinical Training', 'Device Information', 'Practice Integration'].map((pill) => (
+          {['Free Demo', 'Clinical Data', 'ROI Analysis'].map((pill) => (
             <span
               key={pill}
               className="inline-flex items-center bg-gray-100 text-gray-600 text-[11px] font-semibold uppercase tracking-[0.1em] rounded-full px-4 py-2"
@@ -81,6 +81,11 @@ export default function ContactSection() {
             </span>
           ))}
         </div>
+
+        {/* Contact Info */}
+        <p className="reveal text-sm text-[#4B5563] mt-8">
+          info@zerolions.life &middot; +350 540 05198
+        </p>
       </div>
     </section>
   );

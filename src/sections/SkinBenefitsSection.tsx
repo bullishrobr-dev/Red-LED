@@ -113,10 +113,10 @@ export default function SkinBenefitsSection() {
               COSMETIC SCIENCE
             </span>
           </div>
-          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             Deliver Results Your Clients Can See
           </h2>
-          <p className="reveal text-lg text-[#6B7280] max-w-[560px] mx-auto mt-3">
+          <p className="reveal text-lg text-[#4B5563] max-w-[560px] mx-auto mt-3">
             Clinically measurable skin transformation that keeps clients coming back — and drives word-of-mouth referrals for your practice.
           </p>
         </div>
@@ -145,7 +145,7 @@ export default function SkinBenefitsSection() {
                 />
               )}
               <p className="text-base font-medium text-[#111827] mt-4">{card.label}</p>
-              <p className="text-sm text-[#6B7280] mt-2 leading-relaxed">{card.detail}</p>
+              <p className="text-sm text-[#4B5563] mt-2 leading-relaxed">{card.detail}</p>
             </div>
           ))}
         </div>
@@ -157,7 +157,7 @@ export default function SkinBenefitsSection() {
               {i > 0 && <div className="hidden sm:block w-px h-8 bg-[#E5E7EB]" />}
               <div className="text-center">
                 <span className="text-2xl font-bold text-[#0ABAB5]">{s.num}</span>
-                <span className="text-sm text-[#6B7280] ml-2">{s.label}</span>
+                <span className="text-sm text-[#4B5563] ml-2">{s.label}</span>
               </div>
             </div>
           ))}

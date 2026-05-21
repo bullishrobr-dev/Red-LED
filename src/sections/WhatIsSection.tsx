@@ -92,7 +92,7 @@ export default function WhatIsSection() {
         </p>
 
         {/* Headline */}
-        <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+        <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
           What is LED Light Therapy?
         </h2>
 
@@ -107,7 +107,7 @@ export default function WhatIsSection() {
           <div className="reveal bg-white rounded-3xl border border-[#E5E7EB] shadow-card p-8 hover:-translate-y-1 hover:shadow-lg hover:border-[#0ABAB5]/20 transition-all duration-300">
             <Lightbulb className="w-8 h-8 text-[#0ABAB5]" />
             <h3 className="text-xl font-semibold text-black mt-4">Cosmetic Science</h3>
-            <p className="text-[15px] text-[#6B7280] leading-relaxed mt-3">
+            <p className="text-[15px] text-[#4B5563] leading-relaxed mt-3">
               Red light (630–700nm) targets the epidermis and upper dermis to stimulate collagen, reduce wrinkles, and improve skin tone. Near-infrared (700–1100nm) penetrates deeper to support tissue repair and cellular renewal.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function WhatIsSection() {
           <div className="reveal bg-white rounded-3xl border border-[#E5E7EB] shadow-card p-8 hover:-translate-y-1 hover:shadow-lg hover:border-[#0ABAB5]/20 transition-all duration-300">
             <Zap className="w-8 h-8 text-[#0ABAB5]" />
             <h3 className="text-xl font-semibold text-black mt-4">Therapeutic Science</h3>
-            <p className="text-[15px] text-[#6B7280] leading-relaxed mt-3">
+            <p className="text-[15px] text-[#4B5563] leading-relaxed mt-3">
               Near-infrared light reaches muscles, joints, and bone to reduce inflammation, accelerate healing, and provide clinically significant pain relief — without drugs or downtime.
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function WhatIsSection() {
               <p className="text-2xl font-bold text-black">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} isText={stat.isText} />
               </p>
-              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#6B7280] mt-1">
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#4B5563] mt-1">
                 {stat.isText ? 'Class 2 Medical Device' : stat.label}
               </p>
             </div>

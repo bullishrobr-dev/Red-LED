@@ -80,7 +80,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <p className="text-base text-[#6B7280] leading-[1.65] pb-5">
+        <p className="text-base text-[#4B5563] leading-[1.65] pb-5">
           {answer}
         </p>
       </div>
@@ -164,7 +164,7 @@ export default function FAQSection() {
       <section ref={skinRef} id="faq" className="bg-white section-padding">
         <div className="max-w-[720px] mx-auto">
           <div className="reveal text-center">
-            <h2 className="text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em]">
+            <h2 className="text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em]">
               Frequently Asked Questions
             </h2>
           </div>

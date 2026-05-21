@@ -52,10 +52,10 @@ export default function BodySection() {
               BODY SCIENCE
             </span>
           </div>
-          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             Beyond the Face — Body Contouring &amp; Skin Tightening
           </h2>
-          <p className="reveal text-[17px] text-[#6B7280] leading-[1.65] max-w-[720px] mx-auto mt-5">
+          <p className="reveal text-[17px] text-[#4B5563] leading-[1.65] max-w-[720px] mx-auto mt-5">
             Red and Near-Infrared LED therapy isn&apos;t just for facial rejuvenation. The same mechanisms that stimulate collagen in the face work across the entire body — tightening loose skin, improving body contours, and reducing the appearance of cellulite by enhancing circulation and cellular metabolism.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function BodySection() {
             alt="Full-body LED therapy panel for body contouring"
             className="w-full max-w-[600px] mx-auto h-auto rounded-3xl shadow-lg"
           />
-          <p className="text-sm text-[#6B7280] mt-4">
+          <p className="text-sm text-[#4B5563] mt-4">
             Full-body LED panels deliver precise wavelengths at therapeutic intensities for comprehensive body treatments.
           </p>
         </div>

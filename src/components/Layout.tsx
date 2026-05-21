@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import Lenis from 'lenis';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -9,27 +9,6 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const lenisRef = useRef<Lenis | null>(null);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-
-  // Load theme from localStorage on mount
-  useEffect(() => {
-    const saved = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    if (saved) {
-      setTheme(saved);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-    }
-  }, []);
-
-  // Apply data-theme to html element
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = useCallback(() => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  }, []);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -52,10 +31,10 @@ export default function Layout({ children }: LayoutProps) {
   }, []);
 
   return (
-    <div className="relative" data-theme={theme}>
-      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+    <div className="relative">
+      <Navbar />
       <main>{children}</main>
-      <Footer theme={theme} />
+      <Footer />
     </div>
   );
 }

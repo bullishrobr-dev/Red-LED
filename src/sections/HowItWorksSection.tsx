@@ -64,10 +64,10 @@ export default function HowItWorksSection() {
               THE MECHANISM
             </span>
           </div>
-          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             How Light Becomes Healing
           </h2>
-          <p className="reveal text-[17px] text-[#6B7280] leading-[1.65] max-w-[720px] mx-auto mt-5">
+          <p className="reveal text-[17px] text-[#4B5563] leading-[1.65] max-w-[720px] mx-auto mt-5">
             The process begins when red and near-infrared photons are absorbed by Cytochrome c Oxidase (CCO) — a key enzyme inside your cells&apos; mitochondria. This absorption releases inhibitory nitric oxide, which restores the cell&apos;s ability to produce energy. The result: a cascade of cellular repair, reduced inflammation, and renewed collagen production.
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function HowItWorksSection() {
               className="w-full h-auto rounded-xl"
             />
           </div>
-          <p className="text-sm text-[#6B7280] italic mt-4 leading-relaxed text-center">
+          <p className="text-sm text-[#4B5563] italic mt-4 leading-relaxed text-center">
             Light penetration at different wavelengths — red light targets surface layers, near-infrared reaches deep tissue.
           </p>
         </div>
@@ -111,7 +111,7 @@ export default function HowItWorksSection() {
                   {step.num}
                 </div>
                 <p className="text-sm font-medium text-[#111827] mt-2">{step.label}</p>
-                <p className="text-xs text-[#6B7280] mt-0.5">{step.desc}</p>
+                <p className="text-xs text-[#4B5563] mt-0.5">{step.desc}</p>
               </div>
             ))}
           </div>

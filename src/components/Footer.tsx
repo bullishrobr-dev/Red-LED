@@ -1,12 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-interface FooterProps {
-  theme?: 'light' | 'dark';
-}
-
-export default function Footer({ theme = 'light' }: FooterProps) {
+export default function Footer() {
   const ref = useRef<HTMLElement>(null);
-  const isDark = theme === 'dark';
 
   useEffect(() => {
     const el = ref.current;
@@ -31,7 +26,7 @@ export default function Footer({ theme = 'light' }: FooterProps) {
   }, []);
 
   return (
-    <footer ref={ref} className={`${isDark ? 'bg-[#0a0a0a]' : 'bg-black'} py-14`}>
+    <footer ref={ref} className="bg-black py-14">
       <div className="max-w-[1100px] mx-auto px-6 sm:px-12 lg:px-16 flex flex-col items-center text-center">
         {/* Logo - inverted to white for dark footer */}
         <img

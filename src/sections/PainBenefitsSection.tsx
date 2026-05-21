@@ -103,10 +103,10 @@ export default function PainBenefitsSection() {
               THERAPEUTIC SCIENCE
             </span>
           </div>
-          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             Expand Your Service Menu — Enter Pain Management
           </h2>
-          <p className="reveal text-lg text-[#6B7280] max-w-[600px] mx-auto mt-3">
+          <p className="reveal text-lg text-[#4B5563] max-w-[600px] mx-auto mt-3">
             Near-infrared light penetrates deep into muscle and joint tissue — opening a whole new revenue stream for your practice with zero additional staffing costs.
           </p>
         </div>
@@ -124,7 +124,7 @@ export default function PainBenefitsSection() {
           <p className="text-xl font-semibold text-[#111827] mt-4">
             Pain Attenuation for Rheumatoid Arthritis
           </p>
-          <p className="text-sm text-[#6B7280] mt-2">
+          <p className="text-sm text-[#4B5563] mt-2">
             170-patient clinical study demonstrating up to 90% pain reduction
           </p>
         </div>
@@ -140,14 +140,14 @@ export default function PainBenefitsSection() {
                 {card.stat}
               </p>
               <p className="text-base font-medium text-[#111827] mt-4">{card.label}</p>
-              <p className="text-sm text-[#6B7280] mt-2 leading-relaxed">{card.detail}</p>
+              <p className="text-sm text-[#4B5563] mt-2 leading-relaxed">{card.detail}</p>
             </div>
           ))}
         </div>
 
         {/* Professional Adoption Bar */}
         <div className="reveal mt-12 bg-[#FAFAFA] rounded-2xl px-6 sm:px-8 py-6 text-center">
-          <p className="text-sm uppercase tracking-[0.1em] text-[#6B7280]">
+          <p className="text-sm uppercase tracking-[0.1em] text-[#4B5563]">
             Trusted by Professional Sports
           </p>
           <p className="text-base font-medium text-[#111827] mt-2">

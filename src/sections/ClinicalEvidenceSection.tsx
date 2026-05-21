@@ -113,7 +113,7 @@ export default function ClinicalEvidenceSection() {
           <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
             CLINICAL EVIDENCE
           </p>
-          <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
             A Body of Evidence — 60 Years in the Making
           </h2>
         </div>
@@ -123,7 +123,7 @@ export default function ClinicalEvidenceSection() {
           <span className="inline-flex items-center bg-[#0ABAB5] text-white text-sm font-semibold uppercase tracking-[0.12em] rounded-full px-8 py-3">
             FDA CLASS 2 MEDICAL DEVICE
           </span>
-          <p className="text-sm text-[#6B7280] mt-3">
+          <p className="text-sm text-[#4B5563] mt-3">
             21 CFR 878.4810 — Light Therapy Device
           </p>
           <p className="text-[17px] text-[#111827] max-w-[640px] mx-auto mt-4 leading-relaxed">
@@ -154,7 +154,7 @@ export default function ClinicalEvidenceSection() {
                   />
                 )}
                 <p className="text-base font-medium text-[#111827] mt-3">{card.label}</p>
-                <p className="text-sm text-[#6B7280] mt-2 leading-relaxed">{card.detail}</p>
+                <p className="text-sm text-[#4B5563] mt-2 leading-relaxed">{card.detail}</p>
               </div>
             );
           })}
@@ -183,7 +183,7 @@ export default function ClinicalEvidenceSection() {
             alt="Professional LED therapy device"
             className="w-full max-w-[600px] mx-auto h-auto rounded-3xl shadow-lg"
           />
-          <p className="text-sm text-[#6B7280] mt-4">
+          <p className="text-sm text-[#4B5563] mt-4">
             Professional-grade LED therapy panels deliver precise wavelengths at therapeutic intensities.
           </p>
         </div>
