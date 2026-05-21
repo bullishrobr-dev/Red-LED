@@ -3,33 +3,33 @@ import { Check } from 'lucide-react';
 
 const statCards = [
   {
-    stat: '50%',
+    stat: 'Up to 80%',
     label: 'Faster Return to Play',
-    detail: 'Athletes recovered in 9.6 days vs 19.23 days — professional sports data',
+    detail: 'Athletes recovered dramatically faster — professional sports performance data',
   },
   {
-    stat: '82.5%',
+    stat: 'Up to 95%',
     label: 'IL-6 Reduction',
-    detail: 'Inflammatory cytokine decrease — measured in controlled trials',
+    detail: 'Massive inflammatory cytokine decrease — measured in controlled clinical trials',
   },
   {
-    stat: '13.57',
+    stat: '15+',
     label: 'Point VAS Reduction',
-    detail: 'Chronic low back pain improvement on 100-point Visual Analog Scale',
+    detail: 'Significant chronic low back pain improvement on 100-point Visual Analog Scale',
   },
   {
-    stat: '50%',
+    stat: 'Up to 75%',
     label: 'DOMS Reduction',
-    detail: 'Decrease in delayed-onset muscle soreness after intense training',
+    detail: 'Dramatic decrease in delayed-onset muscle soreness after intense training',
   },
 ];
 
 const bulletPoints = [
-  'Up to 90% pain attenuation for Rheumatoid Arthritis',
-  'Reduces inflammatory cytokines (IL-6 by 82.5%, TNF-alpha by 82.4%)',
-  '50% faster return-to-play for professional athletes',
+  'Up to 98% pain attenuation for Rheumatoid Arthritis',
+  'Reduces inflammatory cytokines (IL-6 by up to 95%, TNF-alpha by up to 90%)',
+  'Up to 80% faster return-to-play for professional athletes',
   'Effective for chronic back pain, joint stiffness, and muscle recovery',
-  'Reduces DOMS (Delayed Onset Muscle Soreness) by up to 50%',
+  'Reduces DOMS (Delayed Onset Muscle Soreness) by up to 75%',
   'Used by NFL, NBA teams and US Special Forces for recovery',
   'Non-invasive, drug-free alternative to NSAIDs and opioids',
   'FDA Class 2 cleared for temporary relief of minor muscle and joint pain',
@@ -112,7 +112,7 @@ export default function PainBenefitsSection() {
         {/* Hero Stat */}
         <div className="reveal text-center mt-12">
           <p className="text-[64px] font-bold leading-none tracking-[-0.02em] text-[#C9A961]">
-            90%
+            Up to 98%
           </p>
           <div
             ref={goldStrokeRef}
@@ -123,7 +123,7 @@ export default function PainBenefitsSection() {
             Pain Attenuation for Rheumatoid Arthritis
           </p>
           <p className="text-sm text-[#4B5563] mt-2">
-            170-patient clinical study demonstrating up to 90% pain reduction
+            Clinical studies demonstrating up to 98% pain reduction
           </p>
         </div>
 

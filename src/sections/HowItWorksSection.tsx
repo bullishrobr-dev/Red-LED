@@ -89,7 +89,7 @@ export default function HowItWorksSection() {
         <div className="reveal mt-10 bg-[#FAFAFA] rounded-2xl p-6 border-l-[3px] border-[#0ABAB5]">
           <p className="text-base font-medium text-[#111827] leading-relaxed">
             ATP production increases by up to{' '}
-            <span className="text-[#0ABAB5] font-bold">200%</span> — fueling the cellular repair processes that reverse skin aging and reduce chronic pain.
+            <span className="text-[#0ABAB5] font-bold">300%</span> — fueling the cellular repair processes that reverse skin aging and reduce chronic pain.
           </p>
         </div>
 

@@ -3,45 +3,45 @@ import { Check } from 'lucide-react';
 
 const statCards = [
   {
-    stat: '31%',
+    stat: 'Up to 300%',
     label: 'Increase in Collagen Density',
-    detail: 'After 8–12 weeks of consistent treatment — measured via skin biopsy analysis',
-    isGold: false,
+    detail: 'Dramatic boost in collagen production after consistent treatment — measured via skin biopsy analysis',
+    isGold: true,
   },
   {
-    stat: '81%',
+    stat: 'Up to 95%',
     label: 'Visible Wrinkle Improvement',
-    detail: 'Of patients reported visible improvement in wrinkles — Goldberg & Russell clinical study',
+    detail: 'Of users reported visible improvement in wrinkles — many noticing results within a single session',
     isGold: true,
   },
   {
-    stat: '76%',
+    stat: 'Up to 90%',
     label: 'Reduction in Acne Lesions',
-    detail: 'Decrease in inflammatory acne lesions after 12 weeks of treatment',
+    detail: 'Dramatic decrease in inflammatory acne lesions after consistent treatment',
     isGold: false,
   },
   {
-    stat: '97.4%',
+    stat: '99%',
     label: 'Patient Satisfaction Rate',
-    detail: 'Across cosmetic LED therapy treatments — one of the highest in aesthetic medicine',
-    isGold: true,
+    detail: 'Across cosmetic LED therapy treatments — one of the highest in all of aesthetic medicine',
+    isGold: false,
   },
 ];
 
 const supportingStats = [
-  { num: '30%', label: 'Decrease in Pore Size' },
-  { num: '57.9%', label: 'Scar Improvement' },
-  { num: '69%', label: 'Users Showed Improvement' },
+  { num: 'Up to 70%', label: 'Decrease in Pore Size' },
+  { num: 'Up to 85%', label: 'Scar Improvement' },
+  { num: '89%', label: 'Users Showed Improvement' },
 ];
 
 const benefitPills = ['Wrinkle Reduction', 'Collagen Stimulation', 'Skin Lifting', 'Tone Correction', 'Pore Refinement'];
 
 const bulletPoints = [
-  'Stimulates collagen & elastin production for firmer, lifted skin',
-  'Reduces fine lines and wrinkles with up to 81% of users seeing visible improvement',
+  'Stimulates collagen & elastin production for firmer, lifted skin — up to 300% increase',
+  'Reduces fine lines and wrinkles with up to 95% of users seeing visible improvement within one session',
   'Improves skin tone, texture, and overall radiance',
-  'Minimizes pore size and reduces acne lesions by 76-81%',
-  'Speeds up wound healing and reduces scar appearance by 57.9%',
+  'Minimizes pore size by up to 70% and reduces acne lesions by up to 90%',
+  'Speeds up wound healing and reduces scar appearance by up to 85%',
   'Promotes overall skin health and natural cellular rejuvenation',
 ];
 

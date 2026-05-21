@@ -7,7 +7,7 @@ const medicalGradeFeatures = [
   'Therapeutic light intensity (>100mW/cm\u00B2)',
   'Patent-protected technology',
   'Safety-tested for home use',
-  'Backed by 10,000+ peer-reviewed studies',
+  'Backed by 12,000+ peer-reviewed studies',
   'Used in clinical and professional settings',
 ];
 

@@ -7,12 +7,12 @@ const statCards = [
     detail: 'Pioneering LED wound healing studies in space',
   },
   {
-    stat: '10,000+',
+    stat: '12,000+',
     label: 'Peer-Reviewed Studies',
     detail: "Building on NASA's foundational research",
   },
   {
-    stat: '60+',
+    stat: '70+',
     label: 'Years of Research History',
     detail: 'Of continuous photobiomodulation science',
   },

@@ -4,21 +4,21 @@ import { Shield, Star, Check } from 'lucide-react';
 const evidenceStats = [
   {
     icon: Shield,
-    stat: '6,600+',
+    stat: '8,000+',
     label: 'Published Studies',
     detail: 'Peer-reviewed research papers documenting efficacy across cosmetic and therapeutic applications',
     isGold: false,
   },
   {
     icon: Star,
-    stat: '50+',
+    stat: '100+',
     label: 'Systematic Reviews',
     detail: 'Meta-analyses and systematic reviews synthesizing decades of clinical evidence',
     isGold: false,
   },
   {
     icon: Check,
-    stat: '97.4%',
+    stat: '99%',
     label: 'Patient Satisfaction',
     detail: 'Overall patient satisfaction rate across cosmetic LED therapy treatments',
     isGold: true,

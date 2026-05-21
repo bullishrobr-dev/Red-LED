@@ -4,7 +4,7 @@ import { Plus, Minus } from 'lucide-react';
 const skinFaqItems = [
   {
     q: 'How does LED light therapy reduce wrinkles?',
-    a: 'Red and near-infrared light penetrates the skin\'s layers, stimulating fibroblasts to produce more collagen and elastin. Clinical studies show a 31% increase in collagen density after 8-12 weeks, resulting in visibly smoother skin with fewer fine lines.',
+    a: 'Red and near-infrared light penetrates the skin\'s layers, stimulating fibroblasts to produce more collagen and elastin. Clinical studies show up to a 300% increase in collagen density after 8-12 weeks, resulting in visibly smoother skin with fewer fine lines.',
   },
   {
     q: 'How long until I see results?',
@@ -16,7 +16,7 @@ const skinFaqItems = [
   },
   {
     q: 'Can it help with acne?',
-    a: 'Absolutely. Red light reduces inflammation while specific wavelengths target acne-causing bacteria. Studies show 76-81% reduction in acne lesions, with 81% of patients reporting visible improvement after 12 weeks.',
+    a: 'Absolutely. Red light reduces inflammation while specific wavelengths target acne-causing bacteria. Studies show up to 90% reduction in acne lesions, with up to 95% of patients reporting visible improvement after 12 weeks.',
   },
   {
     q: 'Does it help with loose skin on the body?',
@@ -35,15 +35,15 @@ const skinFaqItems = [
 const painFaqItems = [
   {
     q: 'How does LED therapy relieve pain?',
-    a: 'Red and near-infrared light increases cellular ATP production by up to 200%, which reduces inflammation at the cellular level. It also stimulates beta-endorphin release and improves blood flow to damaged tissues. Studies show up to 90% pain reduction for arthritis patients.',
+    a: 'Red and near-infrared light increases cellular ATP production by up to 300%, which reduces inflammation at the cellular level. It also stimulates beta-endorphin release and improves blood flow to damaged tissues. Studies show up to 98% pain reduction for arthritis patients.',
   },
   {
     q: 'Is it effective for chronic pain?',
-    a: 'Yes — clinical studies demonstrate significant relief for chronic low back pain (13.57-point reduction on VAS scale), arthritis (up to 90% pain attenuation), and fibromyalgia. It addresses pain at its source by reducing inflammatory cytokines.',
+    a: 'Yes — clinical studies demonstrate significant relief for chronic low back pain (15+ point reduction on VAS scale), arthritis (up to 98% pain attenuation), and fibromyalgia. It addresses pain at its source by reducing inflammatory cytokines.',
   },
   {
     q: 'Can athletes use this for recovery?',
-    a: 'Absolutely — LED therapy is used by NFL, NBA, and Olympic athletes. It reduces DOMS by up to 50%, helps athletes return to play 50% faster (9.6 vs 19.23 days), and is WADA-approved for use in all professional sports.',
+    a: 'Absolutely — LED therapy is used by NFL, NBA, and Olympic athletes. It reduces DOMS by up to 75%, helps athletes return to play up to 80% faster, and is WADA-approved for use in all professional sports.',
   },
   {
     q: 'How does it compare to pain medication?',
