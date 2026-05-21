@@ -5,6 +5,7 @@ const navLinks = [
   { label: 'Science', href: '#science' },
   { label: 'Skin', href: '#skin' },
   { label: 'Body', href: '#body' },
+  { label: 'Quality', href: '#quality' },
   { label: 'Evidence', href: '#evidence' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },

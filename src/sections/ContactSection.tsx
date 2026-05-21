@@ -24,7 +24,6 @@ export default function ContactSection() {
             htmlEl.style.opacity = '1';
             htmlEl.style.transform = 'translateY(0) scale(1)';
           });
-          observer.unobserve(section);
         }
       },
       { threshold: 0.15 }
@@ -53,7 +52,7 @@ export default function ContactSection() {
         {/* Contact Buttons */}
         <div className="reveal mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="mailto:info@zerolions.life"
+            href="mailto:info@zerolines.life"
             className="inline-flex items-center gap-3 bg-[#0ABAB5] text-white text-[15px] font-semibold tracking-[0.04em] rounded-full px-8 py-4 hover:bg-[#09a9a4] hover:scale-[1.03] hover:shadow-glow transition-all duration-300"
           >
             <Mail className="w-5 h-5" />
@@ -84,9 +83,13 @@ export default function ContactSection() {
 
         {/* Contact Info */}
         <p className="reveal text-sm text-[#4B5563] mt-8">
-          info@zerolions.life &middot; +350 540 05198
+          info@zerolines.life &middot; +350 540 05198
         </p>
       </div>
     </section>
   );
 }
+   </section>
+  );
+}
+rimitive.Descripti

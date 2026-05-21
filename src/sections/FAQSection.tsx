@@ -22,6 +22,14 @@ const skinFaqItems = [
     q: 'Does it help with loose skin on the body?',
     a: 'Yes — LED therapy stimulates collagen production throughout the body, not just the face. It helps tighten loose skin on arms, abdomen, and thighs, improves body contours, and can reduce the appearance of cellulite and stretch marks.',
   },
+  {
+    q: 'Can I use LED therapy with my existing skincare routine?',
+    a: 'Yes — LED therapy complements your existing skincare routine. Use it on clean, dry skin before applying serums and moisturizers. The light penetrates better without product barriers. After your session, continue with your normal skincare routine. Many users find their products absorb better after LED treatment.',
+  },
+  {
+    q: 'What about pregnancy?',
+    a: 'LED light therapy should NOT be used during pregnancy. While there is no conclusive evidence of harm, there have not been enough studies to guarantee safety. We recommend waiting until after pregnancy and breastfeeding to begin LED therapy.',
+  },
 ];
 
 const painFaqItems = [
@@ -44,6 +52,10 @@ const painFaqItems = [
   {
     q: 'Is it FDA cleared for pain relief?',
     a: 'Yes — our devices are FDA Class 2 Medical Devices, cleared for temporary relief of minor muscle and joint pain, arthritis, muscle spasms, and for increasing local blood circulation.',
+  },
+  {
+    q: 'How long do these devices last?',
+    a: 'Quality LED therapy devices are built to last 50,000+ hours of use — that is decades of regular sessions. The LEDs themselves do not burn out like traditional bulbs. With proper care and storage, your device will remain effective for many years of daily use.',
   },
 ];
 
@@ -146,7 +158,6 @@ export default function FAQSection() {
               htmlEl.style.opacity = '1';
               htmlEl.style.transform = 'translateY(0)';
             });
-            observer.unobserve(section);
           }
         },
         { threshold: 0.15 }

@@ -4,6 +4,7 @@ import WhatIsSection from '@/sections/WhatIsSection'
 import SkinBenefitsSection from '@/sections/SkinBenefitsSection'
 import BodySection from '@/sections/BodySection'
 import NASASection from '@/sections/NASASection'
+import CompetitiveFramingSection from '@/sections/CompetitiveFramingSection'
 import HowItWorksSection from '@/sections/HowItWorksSection'
 import PainBenefitsSection from '@/sections/PainBenefitsSection'
 import WavelengthSection from '@/sections/WavelengthSection'
@@ -19,6 +20,7 @@ export default function Home() {
       <SkinBenefitsSection />
       <BodySection />
       <NASASection />
+      <CompetitiveFramingSection />
       <HowItWorksSection />
       <PainBenefitsSection />
       <WavelengthSection />
