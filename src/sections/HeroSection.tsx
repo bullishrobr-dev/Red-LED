@@ -75,8 +75,7 @@ export default function HeroSection() {
         </h1>
 
         <p className="hero-subheadline text-base sm:text-lg mt-5 max-w-[500px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-          Red &amp; Infrared LED Light Therapy — clinically proven technology
-          for skin rejuvenation and pain relief.
+          Red &amp; Infrared LED Light Therapy activates your body's own natural repair systems — stimulating collagen, reducing inflammation, and helping your skin and body heal from within.
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mt-10">

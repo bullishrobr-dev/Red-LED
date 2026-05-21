@@ -9,10 +9,10 @@ const statCards = [
     isGold: false,
   },
   {
-    stat: '31.6%',
-    label: 'Reduction in Wrinkle Volume',
-    detail: 'Wrinkle volume decrease across treated areas — Wunsch et al. clinical study',
-    isGold: false,
+    stat: '81%',
+    label: 'Visible Wrinkle Improvement',
+    detail: 'Of patients reported visible improvement in wrinkles — Goldberg & Russell clinical study',
+    isGold: true,
   },
   {
     stat: '81%',
@@ -38,7 +38,7 @@ const benefitPills = ['Wrinkle Reduction', 'Collagen Stimulation', 'Skin Lifting
 
 const bulletPoints = [
   'Stimulates collagen & elastin production for firmer, lifted skin',
-  'Reduces fine lines and wrinkles by up to 31.6%',
+  'Reduces fine lines and wrinkles with up to 81% of users seeing visible improvement',
   'Improves skin tone, texture, and overall radiance',
   'Minimizes pore size and reduces acne lesions by 76-81%',
   'Speeds up wound healing and reduces scar appearance by 57.9%',

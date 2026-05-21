@@ -94,6 +94,21 @@ export default function HowItWorksSection() {
           </p>
         </div>
 
+        {/* Body Activation Philosophy Callout */}
+        <div className="reveal mt-8 bg-[#0ABAB5]/5 rounded-2xl p-8 border border-[#0ABAB5]/20">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+              THE ZERO LINES PHILOSOPHY
+            </span>
+          </div>
+          <h3 className="text-xl font-semibold text-[#111827] mb-3">
+            Activate Your Body. Let Nature Do the Rest.
+          </h3>
+          <p className="text-[15px] text-[#374151] leading-relaxed">
+            At Zero Lines, we believe the most powerful solutions don't force change — they activate your body's own ability to heal. LED Light Therapy works by stimulating fibroblasts to produce collagen, energizing cells to repair damage, and triggering your natural anti-inflammatory response. It doesn't inject, doesn't cut, doesn't mask. It simply switches your body's repair systems back on — the same systems that kept your skin firm and your joints pain-free when you were young. Your body knows how to fix itself. We just give it the right light to remember.
+          </p>
+        </div>
+
         {/* Before/After Diagram */}
         <div className="reveal mt-12">
           <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden">

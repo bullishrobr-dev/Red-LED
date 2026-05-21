@@ -98,7 +98,7 @@ export default function WhatIsSection() {
 
         {/* Intro */}
         <p className="reveal text-[17px] text-[#111827] leading-[1.65] mt-6">
-          LED Light Therapy — also known as Low-Level Light Therapy (LLLT) or Photobiomodulation — is a non-invasive treatment that uses specific wavelengths of red and near-infrared light to trigger natural cellular processes. Backed by over 10,000 peer-reviewed studies since 1967, it is one of the most researched therapeutic technologies in modern medicine.
+          LED Light Therapy — also known as Low-Level Light Therapy (LLLT) or Photobiomodulation — is a non-invasive treatment that uses specific wavelengths of red and near-infrared light to activate your body's own natural repair systems. It doesn't mask symptoms or force artificial changes. Instead, it stimulates your cells to produce collagen, reduce inflammation, and heal the way your body was designed to. Backed by over 10,000 peer-reviewed studies since 1967, it is one of the most researched therapeutic technologies in modern medicine.
         </p>
 
         {/* Two Cards */}
@@ -108,7 +108,7 @@ export default function WhatIsSection() {
             <Lightbulb className="w-8 h-8 text-[#0ABAB5]" />
             <h3 className="text-xl font-semibold text-black mt-4">Cosmetic Science</h3>
             <p className="text-[15px] text-[#4B5563] leading-relaxed mt-3">
-              Red light (630–700nm) targets the epidermis and upper dermis to stimulate collagen, reduce wrinkles, and improve skin tone. Near-infrared (700–1100nm) penetrates deeper to support tissue repair and cellular renewal.
+              Red light (630–700nm) activates fibroblasts in your skin to naturally produce collagen and elastin — reducing wrinkles, lifting sagging areas, and restoring youthful tone. Your body does the work. The light simply switches it on.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default function WhatIsSection() {
             <Zap className="w-8 h-8 text-[#0ABAB5]" />
             <h3 className="text-xl font-semibold text-black mt-4">Therapeutic Science</h3>
             <p className="text-[15px] text-[#4B5563] leading-relaxed mt-3">
-              Near-infrared light reaches muscles, joints, and bone to reduce inflammation, accelerate healing, and provide clinically significant pain relief — without drugs or downtime.
+              Near-infrared light reaches deep into muscles, joints, and bone to activate your body's natural anti-inflammatory response. It boosts cellular energy production, accelerates tissue repair, and provides significant pain relief — all without drugs, chemicals, or downtime.
             </p>
           </div>
         </div>
