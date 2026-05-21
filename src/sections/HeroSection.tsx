@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-const benefitPills = ['Anti-Aging', 'Pain Relief'];
+const benefitPills = ['For Clinics & Medical Spas', 'FDA Class 2 Medical Device'];
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -72,12 +72,12 @@ export default function HeroSection() {
           className="hero-headline text-[44px] sm:text-[48px] lg:text-[52px] font-light text-white leading-[1.05] tracking-[-0.02em] mt-8"
           style={{ wordBreak: 'keep-all' }}
         >
-          The Science of Light
+          Clinically Proven LED Therapy for Your Practice
         </h1>
 
         {/* Sub-headline */}
         <p className="hero-subheadline text-base sm:text-[17px] text-white/70 mt-5 max-w-[500px] leading-relaxed">
-          Red &amp; Infrared LED Light Therapy — clinically proven technology for skin rejuvenation and pain relief.
+          Join thousands of clinics and medical spas generating new revenue with FDA Class 2 LED Light Therapy — the science-backed treatment for anti-aging and pain relief.
         </p>
 
         {/* Benefit Pills */}

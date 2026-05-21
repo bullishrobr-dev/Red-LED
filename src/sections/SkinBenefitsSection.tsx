@@ -114,10 +114,10 @@ export default function SkinBenefitsSection() {
             </span>
           </div>
           <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
-            Science-Backed Skin Transformation
+            Deliver Results Your Clients Can See
           </h2>
           <p className="reveal text-lg text-[#6B7280] max-w-[560px] mx-auto mt-3">
-            Clinically measurable results from Red &amp; Infrared LED therapy — no surgery, no downtime.
+            Clinically measurable skin transformation that keeps clients coming back — and drives word-of-mouth referrals for your practice.
           </p>
         </div>
 

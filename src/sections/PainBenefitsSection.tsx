@@ -104,10 +104,10 @@ export default function PainBenefitsSection() {
             </span>
           </div>
           <h2 className="reveal text-[32px] sm:text-[38px] lg:text-[42px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
-            Beyond Skin — Healing from Within
+            Expand Your Service Menu — Enter Pain Management
           </h2>
           <p className="reveal text-lg text-[#6B7280] max-w-[600px] mx-auto mt-3">
-            Near-infrared light penetrates up to 5cm into muscle, bone, and deep tissue — delivering clinically significant pain relief and accelerated recovery.
+            Near-infrared light penetrates deep into muscle and joint tissue — opening a whole new revenue stream for your practice with zero additional staffing costs.
           </p>
         </div>
 

@@ -98,7 +98,7 @@ export default function WhatIsSection() {
 
         {/* Intro */}
         <p className="reveal text-[17px] text-[#111827] leading-[1.65] mt-6">
-          LED Light Therapy — also known as Low-Level Light Therapy (LLLT) or Photobiomodulation — is a non-invasive treatment that uses specific wavelengths of red and near-infrared light to trigger natural cellular processes. Backed by over 10,000 peer-reviewed studies since 1967, it is one of the most researched therapeutic technologies in modern medicine.
+          Red and Near-Infrared LED Light Therapy is one of the fastest-growing treatments in aesthetics and pain management. For clinic owners, it represents a high-margin revenue stream with no consumables, no additional staff, and treatments that take just 15–30 minutes.
         </p>
 
         {/* Two Cards */}
