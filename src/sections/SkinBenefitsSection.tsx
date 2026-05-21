@@ -117,7 +117,7 @@ export default function SkinBenefitsSection() {
             Deliver Results Your Clients Can See
           </h2>
           <p className="reveal text-lg text-[#4B5563] max-w-[560px] mx-auto mt-3">
-            Clinically measurable skin transformation that keeps clients coming back — and drives word-of-mouth referrals for your practice.
+            Clinically measurable results from Red &amp; Infrared LED therapy — no surgery, no downtime.
           </p>
         </div>
 
