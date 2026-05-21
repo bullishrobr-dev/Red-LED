@@ -60,7 +60,7 @@ export default function HeroSection() {
         {/* Logo */}
         <div className="hero-logo">
           <img
-            src="/zero-lines-logo.png"
+            src="/zl-logo-hero.png"
             alt="Zero Lines"
             className="h-16 sm:h-20 w-auto"
             style={{ filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.15))' }}
