@@ -15,22 +15,22 @@ const statCards = [
     isGold: true,
   },
   {
-    stat: 'Up to 90%',
+    stat: '76%',
     label: 'Reduction in Acne Lesions',
-    detail: 'Dramatic decrease in inflammatory acne lesions after consistent treatment',
+    detail: 'Decrease in inflammatory acne lesions after 12 weeks of treatment',
     isGold: false,
   },
   {
-    stat: '99%',
+    stat: '97.4%',
     label: 'Patient Satisfaction Rate',
-    detail: 'Across cosmetic LED therapy treatments — one of the highest in all of aesthetic medicine',
+    detail: 'Across cosmetic LED therapy treatments — one of the highest in aesthetic medicine',
     isGold: false,
   },
 ];
 
 const supportingStats = [
   { num: 'Up to 70%', label: 'Decrease in Pore Size' },
-  { num: 'Up to 85%', label: 'Scar Improvement' },
+  { num: '72%', label: 'Scar Improvement' },
   { num: '89%', label: 'Users Showed Improvement' },
 ];
 
@@ -40,8 +40,8 @@ const bulletPoints = [
   'Stimulates collagen & elastin production for firmer, lifted skin — up to 300% increase',
   'Reduces fine lines and wrinkles with up to 95% of users seeing visible improvement within one session',
   'Improves skin tone, texture, and overall radiance',
-  'Minimizes pore size by up to 70% and reduces acne lesions by up to 90%',
-  'Speeds up wound healing and reduces scar appearance by up to 85%',
+  'Minimizes pore size by up to 70% and reduces acne lesions by 76%',
+  'Speeds up wound healing and reduces scar appearance by 72%',
   'Promotes overall skin health and natural cellular rejuvenation',
 ];
 

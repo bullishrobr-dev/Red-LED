@@ -25,7 +25,7 @@ const statCards = [
 ];
 
 const bulletPoints = [
-  'Up to 98% pain attenuation for Rheumatoid Arthritis',
+  'Up to 90% pain attenuation for Rheumatoid Arthritis',
   'Reduces inflammatory cytokines (IL-6 by up to 95%, TNF-alpha by up to 90%)',
   'Up to 80% faster return-to-play for professional athletes',
   'Effective for chronic back pain, joint stiffness, and muscle recovery',
@@ -112,7 +112,7 @@ export default function PainBenefitsSection() {
         {/* Hero Stat */}
         <div className="reveal text-center mt-12">
           <p className="text-[64px] font-bold leading-none tracking-[-0.02em] text-[#C9A961]">
-            Up to 98%
+            90%
           </p>
           <div
             ref={goldStrokeRef}
@@ -123,7 +123,7 @@ export default function PainBenefitsSection() {
             Pain Attenuation for Rheumatoid Arthritis
           </p>
           <p className="text-sm text-[#4B5563] mt-2">
-            Clinical studies demonstrating up to 98% pain reduction
+            170-patient clinical study demonstrating up to 90% pain reduction
           </p>
         </div>
 

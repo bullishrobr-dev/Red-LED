@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react';
 import { Lightbulb, Zap } from 'lucide-react';
 
 const stats = [
-  { value: 12000, suffix: '+', label: 'Peer-Reviewed Studies' },
-  { value: 70, suffix: '+', label: 'Years Research History' },
+  { value: 10000, suffix: '+', label: 'Peer-Reviewed Studies' },
+  { value: 60, suffix: '+', label: 'Years Research History' },
   { value: null, suffix: '', label: 'FDA Cleared Class 2 Medical Device', isText: true },
 ];
 

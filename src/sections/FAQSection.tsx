@@ -16,7 +16,7 @@ const skinFaqItems = [
   },
   {
     q: 'Can it help with acne?',
-    a: 'Absolutely. Red light reduces inflammation while specific wavelengths target acne-causing bacteria. Studies show up to 90% reduction in acne lesions, with up to 95% of patients reporting visible improvement after 12 weeks.',
+    a: 'Absolutely. Red light reduces inflammation while specific wavelengths target acne-causing bacteria. Studies show 76% reduction in acne lesions, with 81% of patients reporting visible improvement after 12 weeks.',
   },
   {
     q: 'Does it help with loose skin on the body?',
@@ -35,11 +35,11 @@ const skinFaqItems = [
 const painFaqItems = [
   {
     q: 'How does LED therapy relieve pain?',
-    a: 'Red and near-infrared light increases cellular ATP production by up to 300%, which reduces inflammation at the cellular level. It also stimulates beta-endorphin release and improves blood flow to damaged tissues. Studies show up to 98% pain reduction for arthritis patients.',
+    a: 'Red and near-infrared light increases cellular ATP production by up to 300%, which reduces inflammation at the cellular level. It also stimulates beta-endorphin release and improves blood flow to damaged tissues. Studies show up to 90% pain reduction for arthritis patients.',
   },
   {
     q: 'Is it effective for chronic pain?',
-    a: 'Yes — clinical studies demonstrate significant relief for chronic low back pain (15+ point reduction on VAS scale), arthritis (up to 98% pain attenuation), and fibromyalgia. It addresses pain at its source by reducing inflammatory cytokines.',
+    a: 'Yes — clinical studies demonstrate significant relief for chronic low back pain (13.57-point reduction on VAS scale), arthritis (up to 90% pain attenuation), and fibromyalgia. It addresses pain at its source by reducing inflammatory cytokines.',
   },
   {
     q: 'Can athletes use this for recovery?',
