@@ -109,4 +109,60 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Hide scrollbar for horizontal scroll containers */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ── Google Translate cleanup ── */
+
+/* Hide Google Translate top banner */
+.goog-te-banner-frame,
+#goog-gt-tt,
+#goog-gt-,
+.goog-te-balloon-frame,
+#\:1\.container,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  display: none !important;
+}
+
+/* Hide the default Google Translate widget UI */
+.goog-te-gadget {
+  display: none !important;
+}
+
+/* Hide Google font size adjustment */
+font font font,
+font font,
+font {
+  background: transparent !important;
+}
+
+/* Prevent Google from adding extra space at top */
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
+/* Google Translate iframe */
+.goog-te-menu-frame {
+  max-width: 100% !important;
+}
+
+/* Skip translation popup */
+.skiptranslate {
+  display: none !important;
+}
+
+/* Google Translate: don't translate elements with this class */
+.notranslate {
+  translate: no;
 }

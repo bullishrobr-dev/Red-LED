@@ -4,11 +4,11 @@ import { Plus, Minus } from 'lucide-react';
 const skinFaqItems = [
   {
     q: 'How does LED light therapy reduce wrinkles?',
-    a: 'Red and near-infrared light penetrates the skin\'s layers, stimulating fibroblasts to produce more collagen and elastin. Clinical studies show up to a 300% increase in collagen density after 8-12 weeks, resulting in visibly smoother skin with fewer fine lines.',
+    a: 'Red and near-infrared light penetrates the skin\'s layers, stimulating fibroblasts to produce more collagen and elastin. Most users notice improvements from the very first session, with peak results typically appearing after 8-12 weeks of consistent treatment. Studies show up to a 300% increase in collagen density.',
   },
   {
     q: 'How long until I see results?',
-    a: 'Most users notice improved skin texture and radiance within 2-4 weeks. Significant wrinkle reduction and lifting effects typically appear after 8-12 weeks of consistent treatment. Results are cumulative and improve with ongoing maintenance.',
+    a: 'Most users notice improvements from the very first session, with skin texture and radiance visibly enhanced within 2-4 weeks. Peak results — significant wrinkle reduction and lifting — typically appear after 8-12 weeks of consistent treatment. Results are cumulative and improve with ongoing maintenance.',
   },
   {
     q: 'Is LED therapy safe for all skin types?',
@@ -113,9 +113,9 @@ function FAQGroup({
 
   return (
     <div>
-      <div className="flex items-center justify-center gap-2 mb-8">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
-        <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+      <div className="reveal flex items-center justify-center gap-2 mb-8">
+        <span style={{ color: '#C9A96E', fontSize: '10px' }}>&#9670;</span>
+        <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
           {label}
         </span>
       </div>
@@ -172,10 +172,13 @@ export default function FAQSection() {
   return (
     <>
       {/* Part 1: FAQ — Skin & Anti-Aging */}
-      <section ref={skinRef} id="faq" className="bg-white section-padding">
+      <section ref={skinRef} id="faq" className="bg-white" style={{ padding: '100px 0' }}>
         <div className="max-w-[720px] mx-auto">
           <div className="reveal text-center">
-            <h2 className="text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em]">
+            <h2
+              className="font-medium text-black leading-[1.15] tracking-[-0.01em]"
+              style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 400 }}
+            >
               Frequently Asked Questions
             </h2>
           </div>
@@ -186,7 +189,7 @@ export default function FAQSection() {
       </section>
 
       {/* Part 2: FAQ — Pain & Recovery */}
-      <section ref={painRef} className="bg-[#FAFAFA] section-padding">
+      <section ref={painRef} className="bg-[#FAFAFA]" style={{ padding: '100px 0' }}>
         <div className="max-w-[720px] mx-auto">
           <div className="reveal mt-4">
             <FAQGroup items={painFaqItems} label="FAQ — PAIN RELIEF" />

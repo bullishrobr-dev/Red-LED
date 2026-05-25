@@ -15,8 +15,8 @@ export default function HeroSection() {
       if (hasAnimated.current) return;
       hasAnimated.current = true;
       const selectors = [
-        '.hero-logo', '.hero-headline',
-        '.hero-subheadline', '.hero-pill', '.hero-scroll'
+        '.hero-logo', '.hero-headline', '.hero-sub',
+        '.hero-desc', '.hero-pill', '.hero-trust', '.hero-scroll'
       ];
       const els = selectors.flatMap(s =>
         s === '.hero-pill'
@@ -55,9 +55,19 @@ export default function HeroSection() {
         paddingBottom: '80px'
       }}
     >
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 flex flex-col items-center text-center max-w-[640px] mx-auto px-6">
+      {/* Bottom gradient for smooth transition */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[200px]"
+        style={{
+          background: 'linear-gradient(180deg, transparent 0%, #0A1628 100%)'
+        }}
+      />
+
+      <div className="relative z-10 flex flex-col items-center text-center max-w-[720px] mx-auto px-6">
+        {/* Logo */}
         <div className="hero-logo mb-6">
           <img
             src="/zl-logo-hero.png"
@@ -67,18 +77,32 @@ export default function HeroSection() {
           />
         </div>
 
+        {/* Headline — Larger, dramatic */}
         <h1
-          className="hero-headline text-[40px] sm:text-[48px] lg:text-[54px] font-light text-white leading-[1.1] tracking-[-0.02em]"
-          style={{ wordBreak: 'keep-all' }}
+          className="hero-headline font-light text-white leading-[1.05] tracking-[-0.02em]"
+          style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', wordBreak: 'keep-all' }}
         >
           The Science of Light
         </h1>
 
-        <p className="hero-subheadline text-base sm:text-lg mt-5 max-w-[500px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
+        {/* Sub-line with key trust stats */}
+        <p
+          className="hero-sub mt-5 text-sm sm:text-base font-medium tracking-[0.02em]"
+          style={{ color: '#C9A96E' }}
+        >
+          NASA-Engineered &middot; Nobel-Backed &middot; FDA-Cleared
+        </p>
+
+        {/* Description */}
+        <p
+          className="hero-desc text-base sm:text-lg mt-4 max-w-[520px] leading-relaxed"
+          style={{ color: 'rgba(255,255,255,0.72)' }}
+        >
           Red &amp; Infrared LED Light Therapy activates your body's own natural repair systems — stimulating collagen, reducing inflammation, and helping your skin and body heal from within.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-3 mt-10">
+        {/* Pills */}
+        <div className="flex flex-wrap justify-center gap-3 mt-8">
           {benefitPills.map((pill) => (
             <span
               key={pill}
@@ -94,7 +118,20 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <div className="hero-scroll mt-16">
+        {/* Trust Bar — below hero content */}
+        <div
+          className="hero-trust mt-12 flex flex-wrap items-center justify-center gap-5 sm:gap-7 px-6 py-4 rounded-full"
+          style={{ background: 'rgba(255, 255, 255, 0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
+        >
+          <img src="/badges/fda-cleared.png" alt="FDA" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="/badges/nasa-logo.png" alt="NASA" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="/badges/nobel-medal.png" alt="Nobel" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="/badges/patented-approved.png" alt="Patented" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-8 sm:h-10 w-auto opacity-70" />
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="hero-scroll mt-14">
           <ChevronDown className="w-5 h-5 animate-bounce" style={{ color: 'rgba(255, 255, 255, 0.4)' }} />
         </div>
       </div>

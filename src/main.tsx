@@ -1,10 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import { HashRouter } from 'react-router'
 import './index.css'
-import App from './App.tsx'
+import Home from './pages/Home'
 
-createRoot(document.getElementById('root')!).render(
-  <HashRouter>
-    <App />
-  </HashRouter>,
-)
+createRoot(document.getElementById('root')!).render(<Home />)

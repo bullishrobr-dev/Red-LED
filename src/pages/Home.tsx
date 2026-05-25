@@ -1,32 +1,44 @@
 import Layout from '@/components/Layout'
+import ScrollDots from '@/components/ScrollDots'
 import HeroSection from '@/sections/HeroSection'
-import WhatIsSection from '@/sections/WhatIsSection'
-import SkinBenefitsSection from '@/sections/SkinBenefitsSection'
-import BodySection from '@/sections/BodySection'
-import NASASection from '@/sections/NASASection'
-import CompetitiveFramingSection from '@/sections/CompetitiveFramingSection'
+import ScienceCredentialsSection from '@/sections/ScienceCredentialsSection'
 import HowItWorksSection from '@/sections/HowItWorksSection'
-import PainBenefitsSection from '@/sections/PainBenefitsSection'
-import WavelengthSection from '@/sections/WavelengthSection'
+import SkinDiscoverySection from '@/sections/SkinDiscoverySection'
+import ModernSkinSection from '@/sections/ModernSkinSection'
+import BeforeAfterSection from '@/sections/BeforeAfterSection'
+import CelluliteBodySection from '@/sections/CelluliteBodySection'
+import PainAndCancerSection from '@/sections/PainAndCancerSection'
+import CompetitiveFramingSection from '@/sections/CompetitiveFramingSection'
 import ClinicalEvidenceSection from '@/sections/ClinicalEvidenceSection'
+import ExpertQuotesSection from '@/sections/ExpertQuotesSection'
+import NasaDetailSection from '@/sections/NasaDetailSection'
+import NobelDetailSection from '@/sections/NobelDetailSection'
+import FDADetailSection from '@/sections/FDADetailSection'
 import FAQSection from '@/sections/FAQSection'
 import ContactSection from '@/sections/ContactSection'
 
 export default function Home() {
   return (
-    <Layout>
-      <HeroSection />
-      <WhatIsSection />
-      <SkinBenefitsSection />
-      <BodySection />
-      <NASASection />
-      <CompetitiveFramingSection />
-      <HowItWorksSection />
-      <PainBenefitsSection />
-      <WavelengthSection />
-      <ClinicalEvidenceSection />
-      <FAQSection />
-      <ContactSection />
-    </Layout>
+    <>
+      <ScrollDots />
+      <Layout>
+        <HeroSection />
+        <ScienceCredentialsSection />
+        <HowItWorksSection />
+        <SkinDiscoverySection />
+        <ModernSkinSection />
+        <BeforeAfterSection />
+        <CelluliteBodySection />
+        <PainAndCancerSection />
+        <CompetitiveFramingSection />
+        <ClinicalEvidenceSection />
+        <ExpertQuotesSection />
+        <NasaDetailSection />
+        <NobelDetailSection />
+        <FDADetailSection />
+        <FAQSection />
+        <ContactSection />
+      </Layout>
+    </>
   )
 }

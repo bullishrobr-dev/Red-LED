@@ -1,10 +1,3 @@
-import { Routes, Route } from 'react-router'
-import Home from './pages/Home'
-
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
-  )
-}
+// App component is now inline in main.tsx
+// Home.tsx is the root component rendered directly
+export { default } from './pages/Home'

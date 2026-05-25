@@ -38,7 +38,7 @@ export default function HowItWorksSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white section-padding relative overflow-hidden">
+    <section ref={sectionRef} id="how-it-works" className="bg-white relative overflow-hidden" style={{ padding: '120px 0' }}>
       {/* Subtle glow orb behind */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
@@ -58,22 +58,31 @@ export default function HowItWorksSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="reveal flex items-center justify-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+            <span style={{ color: '#C9A96E', fontSize: '10px' }}>&#9670;</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
               THE MECHANISM
             </span>
           </div>
-          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2
+            className="reveal font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4"
+            style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 400 }}
+          >
             How Light Becomes Healing
           </h2>
           <p className="reveal text-[17px] text-[#4B5563] leading-[1.65] max-w-[720px] mx-auto mt-5">
-            The process begins when red and near-infrared photons are absorbed by Cytochrome c Oxidase (CCO) — a key enzyme inside your cells&apos; mitochondria. This absorption releases inhibitory nitric oxide, which restores the cell&apos;s ability to produce energy. The result: a cascade of cellular repair, reduced inflammation, and renewed collagen production.
+            Red and near-infrared photons are absorbed by mitochondria, releasing nitric oxide and restoring cellular energy production — triggering repair, reducing inflammation, and boosting collagen.
           </p>
+
+          {/* Badges - FDA + Clinically Tested */}
+          <div className="reveal flex items-center justify-center gap-4 mt-6">
+            <img src="/badges/fda-cleared.png" alt="FDA Cleared" className="h-14 w-auto opacity-80" />
+            <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-14 w-auto opacity-80" />
+          </div>
         </div>
 
         {/* Skin Cross-Section */}
         <div className="reveal">
-          <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden">
+          <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
             <img
               src="/skin-cross-section.png"
               alt="Skin cross-section showing light penetration"
@@ -86,7 +95,7 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Key Callout Box */}
-        <div className="reveal mt-10 bg-[#FAFAFA] rounded-2xl p-6 border-l-[3px] border-[#0ABAB5]">
+        <div className="reveal mt-10 bg-[#FAFAFA] rounded-2xl p-6 border-l-[3px] border-[#0ABAB5] shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
           <p className="text-base font-medium text-[#111827] leading-relaxed">
             ATP production increases by up to{' '}
             <span className="text-[#0ABAB5] font-bold">300%</span> — fueling the cellular repair processes that reverse skin aging and reduce chronic pain.
@@ -94,9 +103,10 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Body Activation Philosophy Callout */}
-        <div className="reveal mt-8 bg-[#0ABAB5]/5 rounded-2xl p-8 border border-[#0ABAB5]/20">
+        <div className="reveal mt-8 bg-[#0ABAB5]/5 rounded-2xl p-8 border border-[#0ABAB5]/20 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+            <span style={{ color: '#C9A96E', fontSize: '10px' }}>&#9670;</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
               THE ZERO LINES PHILOSOPHY
             </span>
           </div>
@@ -104,13 +114,13 @@ export default function HowItWorksSection() {
             Activate Your Body. Let Nature Do the Rest.
           </h3>
           <p className="text-[15px] text-[#374151] leading-relaxed">
-            At Zero Lines, we believe the most powerful solutions don't force change — they activate your body's own ability to heal. LED Light Therapy works by stimulating fibroblasts to produce collagen, energizing cells to repair damage, and triggering your natural anti-inflammatory response. It doesn't inject, doesn't cut, doesn't mask. It simply switches your body's repair systems back on — the same systems that kept your skin firm and your joints pain-free when you were young. Your body knows how to fix itself. We just give it the right light to remember.
+            LED therapy activates your body&apos;s own healing systems — stimulating collagen, repairing damage, and triggering anti-inflammatory response. No injections, no chemicals, no downtime. Your body knows how to heal. We give it the right light.
           </p>
         </div>
 
         {/* Before/After Diagram */}
         <div className="reveal mt-12">
-          <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden">
+          <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
             <img
               src="/skin-before-after.png"
               alt="Skin before and after LED treatment"

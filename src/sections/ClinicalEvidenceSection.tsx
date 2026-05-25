@@ -7,7 +7,7 @@ const evidenceStats = [
     stat: '6,600+',
     label: 'Published Studies',
     detail: 'Peer-reviewed research papers documenting efficacy across cosmetic and therapeutic applications',
-    isGold: false,
+    isGold: true,
   },
   {
     icon: Star,
@@ -89,7 +89,7 @@ export default function ClinicalEvidenceSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="evidence" className="bg-white section-padding relative overflow-hidden">
+    <section ref={sectionRef} id="evidence" className="bg-white relative overflow-hidden" style={{ padding: '100px 0' }}>
       {/* Subtle glow orb */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
@@ -108,10 +108,16 @@ export default function ClinicalEvidenceSection() {
       <div className="max-w-[1100px] mx-auto relative z-10">
         {/* Header */}
         <div className="text-center">
-          <p className="reveal text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
-            CLINICAL EVIDENCE
-          </p>
-          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <div className="reveal flex items-center justify-center gap-2">
+            <span style={{ color: '#C9A96E', fontSize: '10px' }}>&#9670;</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+              CLINICAL EVIDENCE
+            </span>
+          </div>
+          <h2
+            className="reveal font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4"
+            style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 400 }}
+          >
             A Body of Evidence — 60 Years in the Making
           </h2>
         </div>
@@ -122,30 +128,33 @@ export default function ClinicalEvidenceSection() {
             FDA CLASS 2 MEDICAL DEVICE
           </span>
           <p className="text-sm text-[#4B5563] mt-3">
-            21 CFR 878.4810 — Light Therapy Device
+            Light Therapy Device — Class 2 Medical Classification
           </p>
           <p className="text-[17px] text-[#111827] max-w-[640px] mx-auto mt-4 leading-relaxed">
             LED therapy devices are regulated by the FDA as Class 2 Medical Devices, requiring documented safety and efficacy data. This classification places them alongside ultrasound equipment and surgical lasers in the FDA&apos;s medical device framework.
           </p>
         </div>
 
-        {/* Evidence Stats Grid */}
-        <div className="grid sm:grid-cols-3 gap-6 mt-14">
+        {/* Evidence Stats Grid — Mobile horizontal scroll */}
+        <div className="flex md:grid md:grid-cols-3 gap-6 mt-14 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 px-5 md:px-0 scrollbar-hide">
           {evidenceStats.map((card, i) => {
             const IconComp = card.icon;
             return (
               <div
                 key={i}
-                className={`reveal text-center p-8 sm:p-10 rounded-3xl ${
+                className={`reveal text-center p-8 sm:p-10 rounded-3xl flex-shrink-0 w-[280px] md:w-auto snap-center shadow-[0_4px_24px_rgba(0,0,0,0.04)] ${
                   card.isGold
-                    ? 'bg-gradient-to-b from-white to-[#FAFAFA] border-2 border-[#C9A961]/30 shadow-lg'
-                    : 'bg-white border border-[#E5E7EB]/80 shadow-sm'
+                    ? 'bg-gradient-to-b from-white to-[#FAFAFA] border-2 border-[#C9A961]/30'
+                    : 'bg-white border border-[#E5E7EB]/80'
                 }`}
               >
                 <div className={`w-14 h-14 rounded-2xl mx-auto flex items-center justify-center ${card.isGold ? 'bg-[#C9A961]/10' : 'bg-[#0ABAB5]/10'}`}>
                   <IconComp className={`w-7 h-7 ${card.isGold ? 'text-[#C9A961]' : 'text-[#0ABAB5]'}`} />
                 </div>
-                <p className={`text-[32px] font-bold mt-5 ${card.isGold ? 'text-[#C9A961]' : 'text-black'}`}>
+                <p
+                  className="text-[32px] font-bold mt-5"
+                  style={{ color: card.isGold ? '#C9A961' : undefined }}
+                >
                   {card.stat}
                 </p>
                 {card.isGold && (
@@ -169,7 +178,7 @@ export default function ClinicalEvidenceSection() {
             {adoptionItems.map((item, i) => (
               <div
                 key={i}
-                className="bg-[#FAFAFA] rounded-2xl p-5 text-center border border-[#E5E7EB]/60 hover:border-[#0ABAB5]/30 transition-colors"
+                className="bg-[#FAFAFA] rounded-2xl p-5 text-center border border-[#E5E7EB]/60 hover:border-[#0ABAB5]/30 transition-colors shadow-[0_4px_24px_rgba(0,0,0,0.04)]"
               >
                 <div className="w-10 h-10 rounded-full bg-[#0ABAB5]/10 flex items-center justify-center mx-auto">
                   <Check className="w-5 h-5 text-[#0ABAB5]" />

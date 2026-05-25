@@ -7,7 +7,7 @@ const medicalGradeFeatures = [
   'Therapeutic light intensity (>100mW/cm\u00B2)',
   'Patent-protected technology',
   'Safety-tested for home use',
-  'Backed by 10,000+ peer-reviewed studies',
+  'Backed by thousands of peer-reviewed studies',
   'Used in clinical and professional settings',
 ];
 
@@ -54,7 +54,7 @@ export default function CompetitiveFramingSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="quality" className="bg-white section-padding relative overflow-hidden">
+    <section ref={sectionRef} id="quality" className="bg-white relative overflow-hidden" style={{ padding: '100px 0' }}>
       {/* Subtle glow orb */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
@@ -74,23 +74,29 @@ export default function CompetitiveFramingSection() {
         {/* Header */}
         <div className="text-center mb-14">
           <div className="reveal flex items-center justify-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0ABAB5]" />
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+            <span style={{ color: '#C9A96E', fontSize: '10px' }}>&#9670;</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
               DEVICE QUALITY
             </span>
           </div>
-          <h2 className="reveal text-[36px] sm:text-[42px] lg:text-[48px] font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4">
+          <h2 className="reveal font-medium text-black leading-[1.15] tracking-[-0.01em] mt-4" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 400 }}>
             Medical Grade vs. Consumer Grade
           </h2>
           <p className="reveal text-[17px] text-[#4B5563] leading-[1.65] max-w-[640px] mx-auto mt-5">
-            Not all LED devices are created equal. Understanding the distinction between medical-grade and consumer-grade technology helps you make an informed decision about your health and skin care.
+            Not all LED devices are created equal. Here's what separates medical-grade from consumer-grade.
           </p>
+          <div className="reveal flex items-center justify-center gap-4 mt-6">
+            <img src="/badges/fda-cleared.png" alt="FDA Cleared" className="h-12 w-auto opacity-80" />
+            <img src="/badges/patented-approved.png" alt="Patented" className="h-12 w-auto opacity-80" />
+            <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-12 w-auto opacity-80" />
+            <img src="/badges/dermatologist-recommended.png" alt="Dermatologist Recommended" className="h-12 w-auto opacity-80" />
+          </div>
         </div>
 
-        {/* Comparison Columns */}
-        <div className="reveal grid md:grid-cols-2 gap-6 lg:gap-8">
+        {/* Comparison Columns - Mobile: horizontal scroll */}
+        <div className="reveal flex md:grid md:grid-cols-2 gap-6 lg:gap-8 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 px-5 md:px-0 scrollbar-hide">
           {/* Medical Grade Column */}
-          <div className="bg-[#FAFAFA] rounded-3xl p-6 sm:p-8 border-l-[4px] border-[#0ABAB5]">
+          <div className="flex-shrink-0 w-[300px] md:w-auto snap-center bg-[#FAFAFA] rounded-3xl p-6 sm:p-8 border-l-[4px] border-[#0ABAB5] shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-full bg-[#0ABAB5]/10 flex items-center justify-center">
                 <Check className="w-5 h-5 text-[#0ABAB5]" />
@@ -111,7 +117,7 @@ export default function CompetitiveFramingSection() {
           </div>
 
           {/* Consumer/Toy Grade Column */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E7EB]">
+          <div className="flex-shrink-0 w-[300px] md:w-auto snap-center bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E7EB] shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-full bg-[#9CA3AF]/10 flex items-center justify-center">
                 <X className="w-5 h-5 text-[#9CA3AF]" />
@@ -133,9 +139,10 @@ export default function CompetitiveFramingSection() {
         </div>
 
         {/* Zero Lines Philosophy Callout */}
-        <div className="reveal mt-10 bg-[#0ABAB5]/5 rounded-2xl p-6 sm:p-8 border border-[#0ABAB5]/20">
+        <div className="reveal mt-10 bg-[#0ABAB5]/5 rounded-2xl p-6 sm:p-8 border border-[#0ABAB5]/20 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
+            <span style={{ color: '#C9A96E', fontSize: '10px' }}>&#9670;</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0ABAB5]">
               THE ZERO LINES DIFFERENCE
             </span>
           </div>
