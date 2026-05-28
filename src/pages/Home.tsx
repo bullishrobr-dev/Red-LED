@@ -16,6 +16,7 @@ import NobelDetailSection from '@/sections/NobelDetailSection'
 import FDADetailSection from '@/sections/FDADetailSection'
 import TreatmentCostSection from '@/sections/TreatmentCostSection'
 import FAQSection from '@/sections/FAQSection'
+import PainFAQSection from '@/sections/PainFAQSection'
 import ContactSection from '@/sections/ContactSection'
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
         <FDADetailSection />
         <TreatmentCostSection />
         <FAQSection />
+        <PainFAQSection />
         <ContactSection />
       </Layout>
     </>
