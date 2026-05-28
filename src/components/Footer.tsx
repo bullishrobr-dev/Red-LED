@@ -49,6 +49,30 @@ export default function Footer() {
         <p className="text-white/[0.35] text-xs mt-2 max-w-md">
           Our devices are FDA Class 2 Medical Devices regulated under 21 CFR 878.4810
         </p>
+
+        {/* Legal links */}
+        <div className="flex items-center gap-4 mt-5">
+          <a
+            href="./legal.html"
+            className="text-white/30 text-xs hover:text-[#C9A96E] transition-colors duration-300"
+          >
+            Legal Disclaimer
+          </a>
+          <span className="text-white/10 text-xs">|</span>
+          <a
+            href="./legal.html"
+            className="text-white/30 text-xs hover:text-[#C9A96E] transition-colors duration-300"
+          >
+            Privacy Policy
+          </a>
+          <span className="text-white/10 text-xs">|</span>
+          <a
+            href="./legal.html"
+            className="text-white/30 text-xs hover:text-[#C9A96E] transition-colors duration-300"
+          >
+            Terms of Use
+          </a>
+        </div>
       </div>
     </footer>
   );
