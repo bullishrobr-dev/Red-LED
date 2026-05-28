@@ -58,7 +58,7 @@ export default function WavelengthSection() {
         {/* Diagram Card */}
         <div className="reveal mt-12 bg-white rounded-[28px] p-6 sm:p-10 shadow-card">
           <img
-            src="/wavelength-penetration.png"
+            src="./wavelength-penetration.png"
             alt="Wavelength penetration depth diagram"
             className="w-full h-auto rounded-xl"
           />

@@ -104,7 +104,7 @@ export default function NobelDetailSection() {
               <p className="text-sm text-[#4B5563] mt-2">Peer-reviewed studies building on the Nobel Prize-winning nitric oxide discovery</p>
             </div>
             <div className="sm:ml-auto flex items-center gap-3">
-              <img src="/badges/nobel-medal.png" alt="Nobel Prize" className="h-14 w-auto" />
+              <img src="./badges/nobel-medal.png" alt="Nobel Prize" className="h-14 w-auto" />
               <div>
                 <p className="text-sm font-semibold text-[#111827]">1998 Nobel Prize</p>
                 <p className="text-xs text-[#4B5563]">Furchgott, Ignarro & Murad</p>

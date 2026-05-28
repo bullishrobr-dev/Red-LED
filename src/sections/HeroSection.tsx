@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
+import heroImg from '/hero-red-led.jpg';
 
 const benefitPills = ['Anti-Aging', 'Pain Relief'];
 
@@ -48,7 +49,7 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: 'url(/hero-red-led.jpg)',
+        backgroundImage: `url(${heroImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '100px',
@@ -70,7 +71,7 @@ export default function HeroSection() {
         {/* Logo */}
         <div className="hero-logo mb-6">
           <img
-            src="/zl-logo-hero.png"
+            src="./zl-logo-hero.png"
             alt="Zero Lines"
             className="h-20 sm:h-24 w-auto"
             style={{ filter: 'drop-shadow(0 0 24px rgba(255,255,255,0.2)) brightness(1.15)' }}
@@ -123,11 +124,11 @@ export default function HeroSection() {
           className="hero-trust mt-12 flex flex-wrap items-center justify-center gap-5 sm:gap-7 px-6 py-4 rounded-full"
           style={{ background: 'rgba(255, 255, 255, 0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
         >
-          <img src="/badges/fda-cleared.png" alt="FDA" className="h-8 sm:h-10 w-auto opacity-70" />
-          <img src="/badges/nasa-logo.png" alt="NASA" className="h-8 sm:h-10 w-auto opacity-70" />
-          <img src="/badges/nobel-medal.png" alt="Nobel" className="h-8 sm:h-10 w-auto opacity-70" />
-          <img src="/badges/patented-approved.png" alt="Patented" className="h-8 sm:h-10 w-auto opacity-70" />
-          <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="./badges/fda-cleared.png" alt="FDA" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="./badges/nasa-logo.png" alt="NASA" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="./badges/nobel-medal.png" alt="Nobel" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="./badges/patented-approved.png" alt="Patented" className="h-8 sm:h-10 w-auto opacity-70" />
+          <img src="./badges/clinically-tested.png" alt="Clinically Tested" className="h-8 sm:h-10 w-auto opacity-70" />
         </div>
 
         {/* Scroll indicator */}

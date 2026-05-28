@@ -201,7 +201,7 @@ export default function SkinBenefitsSection() {
           </h3>
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E7EB]/60">
             <img
-              src="/face-antiaging-diagram.png"
+              src="./face-antiaging-diagram.png"
               alt="Facial treatment areas for LED anti-aging therapy"
               className="w-full max-w-[700px] mx-auto h-auto rounded-xl"
             />

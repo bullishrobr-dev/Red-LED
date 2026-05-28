@@ -63,7 +63,7 @@ export default function Navbar() {
             }}
           >
             <img
-              src="/zl-logo-nav.png"
+              src="./zl-logo-nav.png"
               alt="Zero Lines"
               className="h-8 w-auto"
             />
@@ -112,7 +112,7 @@ export default function Navbar() {
         >
           {/* Close button */}
           <div className="flex items-center justify-between h-16 px-6">
-            <img src="/zl-logo-hero.png" alt="Zero Lines" className="h-8 w-auto" />
+            <img src="./zl-logo-hero.png" alt="Zero Lines" className="h-8 w-auto" />
             <button
               onClick={() => setMobileOpen(false)}
               className="p-2 -mr-2"
@@ -143,9 +143,9 @@ export default function Navbar() {
           {/* Bottom trust badges */}
           <div className="absolute bottom-8 left-0 right-0 px-8">
             <div className="flex items-center justify-center gap-4 opacity-50">
-              <img src="/badges/fda-cleared.png" alt="FDA" className="h-8 w-auto" />
-              <img src="/badges/nasa-logo.png" alt="NASA" className="h-8 w-auto" />
-              <img src="/badges/nobel-medal.png" alt="Nobel" className="h-8 w-auto" />
+              <img src="./badges/fda-cleared.png" alt="FDA" className="h-8 w-auto" />
+              <img src="./badges/nasa-logo.png" alt="NASA" className="h-8 w-auto" />
+              <img src="./badges/nobel-medal.png" alt="Nobel" className="h-8 w-auto" />
             </div>
           </div>
         </div>

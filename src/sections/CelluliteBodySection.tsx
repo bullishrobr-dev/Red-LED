@@ -163,7 +163,7 @@ export default function CelluliteBodySection() {
               </span>
             </div>
             <img
-              src="/body-pain-diagram.png"
+              src="./body-pain-diagram.png"
               alt="Body treatment areas — arms, abdomen, thighs, hips, legs"
               className="w-full h-auto rounded-2xl"
             />

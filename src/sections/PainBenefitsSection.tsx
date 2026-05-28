@@ -184,7 +184,7 @@ export default function PainBenefitsSection() {
           </h3>
           <div className="bg-[#FAFAFA] rounded-3xl p-6 sm:p-8 border border-[#E5E7EB]/60">
             <img
-              src="/body-pain-diagram.png"
+              src="./body-pain-diagram.png"
               alt="Body treatment areas for LED pain relief therapy"
               className="w-full max-w-[800px] mx-auto h-auto rounded-xl"
             />
@@ -230,7 +230,7 @@ export default function PainBenefitsSection() {
         {/* Deep Tissue Callout */}
         <div className="reveal grid md:grid-cols-[40%_60%] gap-8 items-center mt-14">
           <img
-            src="/team-sports.png"
+            src="./team-sports.png"
             alt="Professional athletes using LED therapy"
             className="w-full h-auto rounded-[20px] object-cover"
           />

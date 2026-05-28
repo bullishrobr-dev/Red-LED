@@ -75,8 +75,8 @@ export default function HowItWorksSection() {
 
           {/* Badges - FDA + Clinically Tested */}
           <div className="reveal flex items-center justify-center gap-4 mt-6">
-            <img src="/badges/fda-cleared.png" alt="FDA Cleared" className="h-14 w-auto opacity-80" />
-            <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-14 w-auto opacity-80" />
+            <img src="./badges/fda-cleared.png" alt="FDA Cleared" className="h-14 w-auto opacity-80" />
+            <img src="./badges/clinically-tested.png" alt="Clinically Tested" className="h-14 w-auto opacity-80" />
           </div>
         </div>
 
@@ -84,7 +84,7 @@ export default function HowItWorksSection() {
         <div className="reveal">
           <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
             <img
-              src="/skin-cross-section.png"
+              src="./skin-cross-section.png"
               alt="Skin cross-section showing light penetration"
               className="w-full h-auto rounded-xl"
             />
@@ -122,7 +122,7 @@ export default function HowItWorksSection() {
         <div className="reveal mt-12">
           <div className="bg-[#FAFAFA] rounded-[28px] p-6 sm:p-10 overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
             <img
-              src="/skin-before-after.png"
+              src="./skin-before-after.png"
               alt="Skin before and after LED treatment"
               className="w-full h-auto rounded-xl"
             />

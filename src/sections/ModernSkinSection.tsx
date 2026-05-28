@@ -105,7 +105,7 @@ export default function ModernSkinSection() {
 
           {/* Badge */}
           <div className="reveal flex items-center justify-center mt-6">
-            <img src="/badges/dermatologist-recommended.png" alt="Dermatologist Recommended" className="h-16 w-auto" />
+            <img src="./badges/dermatologist-recommended.png" alt="Dermatologist Recommended" className="h-16 w-auto" />
           </div>
         </div>
 
@@ -150,7 +150,7 @@ export default function ModernSkinSection() {
               </span>
             </div>
             <img
-              src="/face-antiaging-diagram.png"
+              src="./face-antiaging-diagram.png"
               alt="Face treatment areas — forehead, cheeks, jawline, neck"
               className="w-full h-auto rounded-2xl"
             />

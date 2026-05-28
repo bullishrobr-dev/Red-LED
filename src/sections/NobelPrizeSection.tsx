@@ -55,7 +55,7 @@ export default function NobelPrizeSection() {
 
         {/* Nobel Badge */}
         <div className="reveal">
-          <img src="/badges/nobel-medal.png" alt="Nobel Prize Medal" className="h-28 sm:h-36 w-auto mx-auto mt-8" />
+          <img src="./badges/nobel-medal.png" alt="Nobel Prize Medal" className="h-28 sm:h-36 w-auto mx-auto mt-8" />
         </div>
 
         {/* Stat Cards - Mobile: horizontal scroll */}

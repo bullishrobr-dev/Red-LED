@@ -192,7 +192,7 @@ export default function ClinicalEvidenceSection() {
         {/* Device Image */}
         <div className="reveal mt-12 text-center">
           <img
-            src="/clinical-device.png"
+            src="./clinical-device.png"
             alt="Professional LED therapy device"
             className="w-full max-w-[600px] mx-auto h-auto rounded-3xl shadow-lg"
           />

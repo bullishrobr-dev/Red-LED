@@ -98,7 +98,7 @@ export default function ScienceCredentialsSection() {
           <div className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto snap-x snap-mandatory pb-6 lg:pb-0 px-5 lg:px-0 scrollbar-hide">
             {/* NASA Column */}
             <div className="flex-shrink-0 w-[310px] lg:w-auto snap-center text-center p-10 rounded-3xl border border-white/10 bg-white/[0.03] flex flex-col">
-              <img src="/badges/nasa-logo.png" alt="NASA" className="h-20 w-auto mx-auto" />
+              <img src="./badges/nasa-logo.png" alt="NASA" className="h-20 w-auto mx-auto" />
               <h3 className="text-xl font-semibold text-white mt-6">Born from Space</h3>
               <p className="text-sm text-white/40 mt-3 leading-relaxed flex-grow">
                 NASA funded LED research in 1995 to heal astronaut wounds in space.
@@ -127,7 +127,7 @@ export default function ScienceCredentialsSection() {
 
             {/* Nobel Column */}
             <div className="flex-shrink-0 w-[310px] lg:w-auto snap-center text-center p-10 rounded-3xl border border-white/10 bg-white/[0.03] flex flex-col">
-              <img src="/badges/nobel-medal.png" alt="Nobel Prize" className="h-24 w-auto mx-auto" />
+              <img src="./badges/nobel-medal.png" alt="Nobel Prize" className="h-24 w-auto mx-auto" />
               <h3 className="text-xl font-semibold text-white mt-6">Nobel Science</h3>
               <p className="text-sm text-white/40 mt-3 leading-relaxed flex-grow">
                 The Nobel Prize discovery of nitric oxide — the molecule LED therapy triggers.
@@ -148,7 +148,7 @@ export default function ScienceCredentialsSection() {
 
             {/* FDA Column */}
             <div className="flex-shrink-0 w-[310px] lg:w-auto snap-center text-center p-10 rounded-3xl border border-white/10 bg-white/[0.03] flex flex-col">
-              <img src="/badges/fda-cleared.png" alt="FDA Cleared" className="h-20 w-auto mx-auto" />
+              <img src="./badges/fda-cleared.png" alt="FDA Cleared" className="h-20 w-auto mx-auto" />
               <h3 className="text-xl font-semibold text-white mt-6">FDA Cleared</h3>
               <p className="text-sm text-white/40 mt-3 leading-relaxed flex-grow">
                 Officially classified as a Class 2 Medical Device — reviewed for safety and efficacy.
@@ -166,9 +166,9 @@ export default function ScienceCredentialsSection() {
                 Learn More <ChevronDown className="w-3.5 h-3.5" />
               </button>
               <div className="flex items-center justify-center gap-3 mt-3">
-                <img src="/badges/patented-approved.png" alt="Patented" className="h-10 w-auto opacity-60" />
-                <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-10 w-auto opacity-60" />
-                <img src="/badges/ukas-quality.png" alt="UKAS" className="h-10 w-auto opacity-60" />
+                <img src="./badges/patented-approved.png" alt="Patented" className="h-10 w-auto opacity-60" />
+                <img src="./badges/clinically-tested.png" alt="Clinically Tested" className="h-10 w-auto opacity-60" />
+                <img src="./badges/ukas-quality.png" alt="UKAS" className="h-10 w-auto opacity-60" />
               </div>
             </div>
           </div>

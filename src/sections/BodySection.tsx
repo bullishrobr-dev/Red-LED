@@ -74,7 +74,7 @@ export default function BodySection() {
         {/* Device Image */}
         <div className="reveal mt-12 text-center">
           <img
-            src="/clinical-device.png"
+            src="./clinical-device.png"
             alt="Full-body LED therapy panel for body contouring"
             className="w-full max-w-[600px] mx-auto h-auto rounded-3xl shadow-lg"
           />

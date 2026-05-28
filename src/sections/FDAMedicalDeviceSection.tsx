@@ -56,10 +56,10 @@ export default function FDAMedicalDeviceSection() {
 
         {/* Certification Badges Row */}
         <div className="reveal flex flex-wrap items-center justify-center gap-6 sm:gap-8 mt-8">
-          <img src="/badges/fda-cleared.png" alt="FDA Cleared" className="h-20 w-auto" />
-          <img src="/badges/patented-approved.png" alt="Patented" className="h-16 w-auto" />
-          <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-16 w-auto" />
-          <img src="/badges/ukas-quality.png" alt="UKAS Quality" className="h-16 w-auto" />
+          <img src="./badges/fda-cleared.png" alt="FDA Cleared" className="h-20 w-auto" />
+          <img src="./badges/patented-approved.png" alt="Patented" className="h-16 w-auto" />
+          <img src="./badges/clinically-tested.png" alt="Clinically Tested" className="h-16 w-auto" />
+          <img src="./badges/ukas-quality.png" alt="UKAS Quality" className="h-16 w-auto" />
         </div>
 
         {/* Feature Cards - Mobile: horizontal scroll */}

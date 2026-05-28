@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="max-w-[1100px] mx-auto px-6 sm:px-12 lg:px-16 flex flex-col items-center text-center">
         {/* Logo - inverted to white for dark footer */}
         <img
-          src="/zl-logo-nav.png"
+          src="./zl-logo-nav.png"
           alt="Zero Lines"
           className="h-7 w-auto brightness-0 invert"
         />

@@ -56,7 +56,7 @@ export default function NasaOriginsSection() {
 
         {/* NASA Badge */}
         <div className="reveal">
-          <img src="/badges/nasa-logo.png" alt="NASA" className="h-24 sm:h-32 w-auto mx-auto mt-8" />
+          <img src="./badges/nasa-logo.png" alt="NASA" className="h-24 sm:h-32 w-auto mx-auto mt-8" />
         </div>
 
         {/* Stat Cards - Mobile: horizontal scroll */}

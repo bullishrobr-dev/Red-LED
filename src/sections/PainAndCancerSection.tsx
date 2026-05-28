@@ -56,7 +56,7 @@ export default function PainAndCancerSection() {
 
         {/* Clinically Tested Badge */}
         <img
-          src="/badges/clinically-tested.png"
+          src="./badges/clinically-tested.png"
           alt="Clinically Tested"
           className="reveal h-16 w-auto mx-auto mt-6"
         />

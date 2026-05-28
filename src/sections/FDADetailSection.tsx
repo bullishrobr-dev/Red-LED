@@ -111,9 +111,9 @@ export default function FDADetailSection() {
                 To earn Class 2 status, a device must meet all of these requirements. Zero Lines checks every box.
               </p>
               <div className="flex items-center justify-center lg:justify-start gap-4 mt-6">
-                <img src="/badges/fda-cleared.png" alt="FDA Cleared" className="h-14 sm:h-16 w-auto" />
-                <img src="/badges/patented-approved.png" alt="Patented" className="h-11 sm:h-12 w-auto opacity-70" />
-                <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-11 sm:h-12 w-auto opacity-70" />
+                <img src="./badges/fda-cleared.png" alt="FDA Cleared" className="h-14 sm:h-16 w-auto" />
+                <img src="./badges/patented-approved.png" alt="Patented" className="h-11 sm:h-12 w-auto opacity-70" />
+                <img src="./badges/clinically-tested.png" alt="Clinically Tested" className="h-11 sm:h-12 w-auto opacity-70" />
               </div>
             </div>
             <div className="lg:w-1/2">

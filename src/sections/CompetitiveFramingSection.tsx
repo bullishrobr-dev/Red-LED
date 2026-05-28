@@ -86,10 +86,10 @@ export default function CompetitiveFramingSection() {
             Not all LED devices are created equal. Here's what separates medical-grade from consumer-grade.
           </p>
           <div className="reveal flex items-center justify-center gap-4 mt-6">
-            <img src="/badges/fda-cleared.png" alt="FDA Cleared" className="h-12 w-auto opacity-80" />
-            <img src="/badges/patented-approved.png" alt="Patented" className="h-12 w-auto opacity-80" />
-            <img src="/badges/clinically-tested.png" alt="Clinically Tested" className="h-12 w-auto opacity-80" />
-            <img src="/badges/dermatologist-recommended.png" alt="Dermatologist Recommended" className="h-12 w-auto opacity-80" />
+            <img src="./badges/fda-cleared.png" alt="FDA Cleared" className="h-12 w-auto opacity-80" />
+            <img src="./badges/patented-approved.png" alt="Patented" className="h-12 w-auto opacity-80" />
+            <img src="./badges/clinically-tested.png" alt="Clinically Tested" className="h-12 w-auto opacity-80" />
+            <img src="./badges/dermatologist-recommended.png" alt="Dermatologist Recommended" className="h-12 w-auto opacity-80" />
           </div>
         </div>
 
