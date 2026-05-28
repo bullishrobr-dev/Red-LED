@@ -14,6 +14,7 @@ import ExpertQuotesSection from '@/sections/ExpertQuotesSection'
 import NasaDetailSection from '@/sections/NasaDetailSection'
 import NobelDetailSection from '@/sections/NobelDetailSection'
 import FDADetailSection from '@/sections/FDADetailSection'
+import TreatmentCostSection from '@/sections/TreatmentCostSection'
 import FAQSection from '@/sections/FAQSection'
 import ContactSection from '@/sections/ContactSection'
 
@@ -36,6 +37,7 @@ export default function Home() {
         <NasaDetailSection />
         <NobelDetailSection />
         <FDADetailSection />
+        <TreatmentCostSection />
         <FAQSection />
         <ContactSection />
       </Layout>
